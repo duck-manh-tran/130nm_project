@@ -1,0 +1,11 @@
+* ngspice initialization for sky130
+* assert BSIM compatibility mode with "nf" vs. "W"
+set ngbehavior=hs
+
+** ascii rawfile **
+set filetype=binary
+
+** set the number of threads in openmp
+** default (if compiled with --enable-openmp) is: 2
+set num_threads=4
+set interactive

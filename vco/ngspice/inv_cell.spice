@@ -1,0 +1,17 @@
+.subckt inv_cell y a VDDPIN  VSSPIN L_N=0.15 W_N=1 F_N=1 L_P=0.15 W_P=2 F_P=1 M_U=1
+*.opin y
+*.ipin a
+
+*nmos
+XM1 a y VSSPIN VSSPIN sky130_fd_pr__nfet_01v8 L=L_N W=W_N nf=F_N ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0
+
+*pmos
+XM2 a y VDDPIN VDDPIN sky130_fd_pr__pfet_01v8 L=L_P W=W_P nf=F_P ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0
+.ends inv_cell
+
+*XMn D G S B modelname L=0.15u W=0.36u m=1 nf=1 
+

@@ -1,0 +1,57 @@
+* Subcircuit       : ring_osc
+* Library          : ADC_130nm
+* Generate for     : NGSPICE (ngbehavior=hs)
+********************************************************************************
+.subckt ring_osc vdd vss 
++ p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10]
+
+*phase0_inv0(out -> p[0])
+Xc1 p[10] p_n[10] p[0] p_n[0] vdd vss crs_cpl_inv
+
+
+*phase1_inv1(out -> p[1])
+Xc2 p[0] p_n[0] p[1] p_n[1] vdd vss crs_cpl_inv
+
+
+*phase1_inv2(out -> p[2])
+Xc3 p[1] p_n[1] p[2] p_n[2] vdd vss crs_cpl_inv
+
+
+*phase1_inv3(out -> p[3])
+Xc4 p[2] p_n[2] p[3] p_n[3] vdd vss crs_cpl_inv
+
+
+*phase1_inv4(out -> p[4])
+Xc5 p[3] p_n[3] p[4] p_n[4] vdd vss crs_cpl_inv
+
+
+*phase1_inv5(out -> p[5])
+Xc6 p[4] p_n[4] p[5] p_n[5] vdd vss crs_cpl_inv
+
+
+*phase1_inv6(out -> p[6])
+Xc7 p[5] p_n[5] p[6] p_n[6] vdd vss crs_cpl_inv
+
+
+*phase1_inv7(out -> p[7])
+Xc8 p[6] p_n[6] p[7] p_n[7] vdd vss crs_cpl_inv
+
+
+*phase1_inv8(out -> p[8])
+Xc9 p[7] p_n[7] p[8] p_n[8] vdd vss crs_cpl_inv
+
+
+*phase1_inv9(out -> p[9])
+Xc10 p[8] p_n[8] p[9] p_n[9] vdd vss crs_cpl_inv
+
+
+*phase1_inv10(out -> p[10])
+Xc11 p[9] p_n[9] p[10] p_n[10] vdd vss crs_cpl_inv
+
+
+.ends ring_osc
+
+
+*note:
+* .subckt crs_cpl_inv inp inn outp outn vdd vss
+

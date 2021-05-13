@@ -1,0 +1,27 @@
+* Subcircuit		 : cross coupling inverter
+* Library          : ADC_130nm
+* Generate for     : NGSPICE (ngbehavior=hs)
+********************************************************************************
+* ipin inp(in positive) inn(in negative)
+* opin outp(out positive) outn(out negative)
+.include ./inv_cell.spice
+
+.subckt crs_cpl_inv inp inn outp outn vdd vss
++ Ln_12=0.36 Wn_12=1 Fn_12=1 Lp_12=0.36 Wp_12=1 Fp_12=1
++ Ln_34=0.36 Wn_34=1 Fn_34=1 Lp_34=0.36 Wp_34=1 Fp_34=1
+
+*inv1
+xi1 inp outp vdd vss inv_cell L_N=Ln_12 W_N=Wn_12 F_N=Fn_12 W_P=Wp_12 L_P=Lp_12 F_P=Fp_12
+
+*inv2
+xi2 inn outn vdd vss inv_cell L_N=Ln_12 W_N=Wn_12 F_N=Fn_12 W_P=Wp_12 L_P=Lp_12 F_P=Fp_12
+
+*inv3
+xi3 outp outn vdd vss inv_cell L_N=Ln_34 W_N=Wn_34 F_N=Fn_34 L_P=Lp_34 W_P=Wp_34 F_P=Fp_34
+
+*inv4
+xi4 outn outp vdd vss inv_cell L_N=Ln_34 W_N=Wn_34 F_N=Fn_34 L_P=Lp_34 W_P=Wp_34 F_P=Fp_34
+
+.ends crs_cpl_inv
+*note:
+*inv_cell .subckt inv_cell y a VDDPIN  VSSPIN W_N=1 L_N=0.15 F_N=1 W_P=2 L_P=0.15 F_P=1

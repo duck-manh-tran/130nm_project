@@ -1,0 +1,67 @@
+*	Cell				 	: ring oscillator testbench
+*  Generated for		: NGSPICE
+*  Library name		: ADC_130nm
+*  Design cell name	: ring_osc_tb.spice
+******************************************************
+.lib /home/dkit/openpdk/pdks/1.0.140/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.temp 25
+
+
+.global gnd vdd
+.inc inv_cell.spice
+.inc crs_cpl_inv.spice
+.inc ring_osc.spice
+.inc digital.spice	
+
+
+*_____________cross coupling inverter testbench__________________*
+
+Xr1 vdd v_crt fa[0] fa[1] fa[2] fa[3] fa[4]
++ fa[5] fa[6] fa[7] fa[8] fa[9] fa[10] ring_osc
++ Ln12=1.8 Wn12=4.5 Fn12=4	
++ Lp12=1.8 Wp12=4.5 Fp12=2
++ Ln34=1.8 Wn34=4 Fn34=2
++ Lp34=1.8 Wp34=4 Fp34=1
+
+
+V2 vdd gnd DC=1.8
+V3 v_in gnd DC=0.8
+R1 v_in v_crt 100
+R2 v_crt gnd 100 
+V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
+D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
+
+
+.tran 0.2n 5u
+
+.control
+set num_threads=4
+let prd=1
+let Vin=unitvec(10)
+let Vin[0]=0.1
+let ix=0
+let freq=unitvec(10)
+let Vcrt=unitvec(10)
+
+while Vin[ix] < 1.21
+
+	alter V3 DC=Vin[ix]
+	run		
+	MEAS TRAN prd TRIG fa[0] VAL=0.9 RISE=8 TARG fa[0] VAL=0.9 RISE =9
+	MEAS TRAN Vcrt[ix] AVG v(v_crt) from=3u to=4u
+	let freq[ix] = 1/prd	
+	let ix = ix+1
+	Let Vin[ix] = Vin[ix-1]+0.3
+end
+plot "fa[0]"
+plot freq vs Vin
+print Vin Vcrt freq >> ./result/measure_result.txt 
+*write ./result/ring_osc.raw
+
+.endc
+
+
+* D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
+* Xi1 net1 gnd gnd vdd vdd net2 sky130_fd_sc_hd__inv_1
+* Xi2 net2 gnd gnd vdd vdd fa[0] sky130_fd_sc_hd__inv_1
+* Xn1 enb fa[0] gnd gnd vdd vdd net1 sky130_fd_sc_hd__nand2_1

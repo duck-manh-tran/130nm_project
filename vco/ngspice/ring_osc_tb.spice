@@ -55,7 +55,7 @@ while Vin[ix] < 1.21
 end
 plot "fa[0]"
 plot freq vs Vin
-print Vin Vcrt freq >> ./result/measure_result.txt 
+print Vin Vcrt freq > ./result/measure_result.txt 
 *write ./result/ring_osc.raw
 
 .endc

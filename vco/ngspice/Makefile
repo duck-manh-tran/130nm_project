@@ -1,7 +1,5 @@
 all: osc_tb_i
 osc_tb_i:
-	echo "*******************************" >> ./result/measure_result.txt
-	grep -i '+ L' ring_osc_tb.spice >> ./result/measure_result.txt
 	ngspice -r ./result/ring_osc_tb.raw -i ring_osc_tb.spice
 
 osc_tb_b:

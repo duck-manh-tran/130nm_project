@@ -1,10 +1,9 @@
-all: osc_tb_i
+all: osc_tb_b
 osc_tb_i:
-	ngspice -r ./result/ring_osc_tb.raw -i ring_osc_tb.spice
+	ngspice -r ./result/ring_osc_tb.raw -b ring_osc_tb.spice
 
 osc_tb_b:
-	ngspice -r ./result/ring_osc_tb.raw -o ./result/ring_osc.log -b ring_osc_tb.spice
-	gaw ./result/ring_osc_tb.raw 
+	ngspice -o ./result/ring_osc.log -b ring_osc_tb.spice 
 	
 .PHONY: osc_tb_b
 

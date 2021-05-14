@@ -38,8 +38,8 @@ Xr1 vdd v_crt fa[0] fa[1] fa[2] fa[3] fa[4]
 
 V2 vdd gnd DC=1.8
 V3 v_in gnd DC=0.8
-R1 v_in v_crt R_val
-R2 v_crt gnd R_val 
+R1 v_in v_crt 100
+R2 v_crt gnd 100 
 V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
 D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
 

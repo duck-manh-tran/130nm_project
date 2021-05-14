@@ -1,0 +1,52 @@
+document for ring oscillator testbench (ring_osc_tb.spice)
+
+/!\ source ../../sky130_env.sh
+
+1. Monte-carlo simulation
+     
+	This simulation you should change some semiconductor fabication corner and temprature in opration time of VCO.
+
+a. Corner
+	sky130nm pdk libary include mismatch conditions and corner of fabication. You shoud simulation with these corner to guarantee that your design can run exactly if fabication process isn't perfect.
+	130nm library file:/home/dkits/efabless/open_pdks/sky130A/libs.tech/ngspice/sky130.lib.spicult1 result2 > ./corner_dir/temp_aa.txt
+ content the corners:
+*		     * Typical corner (tt)
+*                    * Slow-Fast corner (sf)
+*                    * Fast-Fast corner (ff)
+*                    * Slow-Slow corner (ss)
+*                    * Fast-Slow corner (fs)
+*                    * Low-Low corner (ll)
+*                    * High-High corner (hh)
+*                    * High-Low corner (hl)
+*                    * Low-High corner (lh)
+
+You can set Typycal cornner in file: ring_osc_tb.spice like below example:
+.lib /home/dkits/efabless/open_pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+b. Temperature
+	This simulations sweep temperature from -25*c to 140*c and confirm that your circuit works well for the normal temperature.
+In this simulation, you can change temperature in file ring_osc_tb.spice from 0*c to 120*c:
+For example 25*c:  
+.temp 25
+
+
+c. Organize file and directory for Monte-carlo simulations
+For each corner, you should create a directory and save all result file of change temprature simulations in this directory. Name of directory you can create like: "typical_corner", and change in .control conditions like that:
+
+print result1 result2 > ./corner_dir/temp_aa.txt
+
+where	corner_dir: directory for corner
+	temp_aa.txt: result file of aa temperarure
+	result1, result2: results of this simulation
+example:
+print Vin freq > ./typical_corner/temp_25.txt
+
+/!\ Before simulate, you must create directory by terminal like that:
+	$mkdir typical_corner
+
+2. Find value of tail resitors (option)
+*Change temperatures: 0:5:120 (0, 5, 10, ...., 120) 
+.temp 25
+
+
+

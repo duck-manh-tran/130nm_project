@@ -3,16 +3,28 @@
 *  Library name		: ADC_130nm
 *  Design cell name	: ring_osc_tb.spice
 ******************************************************
-.lib /home/dkit/openpdk/pdks/1.0.140/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-.temp 25
+* Change corner lib: * Typical corner (tt)
+* 		     * Slow-Fast corner (sf)
+*		     * Fast-Fast corner (ff)
+*		     * Slow-Slow corner (ss)
+*		     * Fast-Slow corner (fs)
+*		     * Low-Low corner (ll)
+*		     * High-High corner (hh)
+*		     * High-Low corner (hl)
+*		     * Low-High corner (lh)
 
+.lib /home/dkits/efabless/open_pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt 
+
+*Change temperatures: 0:5:120 (0, 5, 10, ...., 120)
+.temp 25
 
 .global gnd vdd
 .inc inv_cell.spice
 .inc crs_cpl_inv.spice
 .inc ring_osc.spice
-.inc digital.spice	
 
+*Change resistor values (option)
+.param R_val=100
 
 *_____________cross coupling inverter testbench__________________*
 
@@ -26,8 +38,8 @@ Xr1 vdd v_crt fa[0] fa[1] fa[2] fa[3] fa[4]
 
 V2 vdd gnd DC=1.8
 V3 v_in gnd DC=0.8
-R1 v_in v_crt 100
-R2 v_crt gnd 100 
+R1 v_in v_crt R_val
+R2 v_crt gnd R_val 
 V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
 D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
 
@@ -37,11 +49,11 @@ D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
 .control
 set num_threads=4
 let prd=1
-let Vin=unitvec(10)
+let Vin=unitvec(120)
 let Vin[0]=0.1
 let ix=0
-let freq=unitvec(10)
-let Vcrt=unitvec(10)
+let freq=unitvec(120)
+let Vcrt=unitvec(120)
 
 while Vin[ix] < 1.21
 
@@ -51,13 +63,17 @@ while Vin[ix] < 1.21
 	MEAS TRAN Vcrt[ix] AVG v(v_crt) from=3u to=4u
 	let freq[ix] = 1/prd	
 	let ix = ix+1
-	Let Vin[ix] = Vin[ix-1]+0.3
+	Let Vin[ix] = Vin[ix-1]+0.01
 end
-plot "fa[0]"
-plot freq vs Vin
-print Vin Vcrt freq > ./result/measure_result.txt 
-*write ./result/ring_osc.raw
 
+* Organize file and directory at here:
+* syntax print to file:
+* print result1 result2 > ./corner_dir/temp_aa.txt
+
+
+print Vin Vcrt freq > ./typical_corner/temp_25.txt 
+*write ./result/ring_osc.raw
+quit
 .endc
 
 

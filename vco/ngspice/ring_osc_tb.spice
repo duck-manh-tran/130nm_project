@@ -31,10 +31,10 @@
 
 Xr1 vdd v_crt fa[0] fa[1] fa[2] fa[3] fa[4]
 + fa[5] fa[6] fa[7] fa[8] fa[9] fa[10] ring_osc
-+ Ln12=1.8 Wn12=4.5 Fn12=2	
-+ Lp12=1.8 Wp12=9 Fp12=2
-+ Ln34=1.8 Wn34=4 Fn34=1
-+ Lp34=1.8 Wp34=8 Fp34=1
++ Ln12=1.8 Wn12=4.5 Fn12=4	
++ Lp12=1.8 Wp12=4.5 Fp12=2
++ Ln34=1.8 Wn34=4 Fn34=2
++ Lp34=1.8 Wp34=4 Fp34=1
 
 
 V2 vdd gnd DC=1.8
@@ -82,7 +82,7 @@ echo "-----------------temp=" $&temp_simu "-------------------------------">> ./
 print Vin Vcrt freq >> ./typical_corner/temp_0_to_120.txt 
 let iy=iy+1
 end
-
+quit
 .endc
 
 

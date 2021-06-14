@@ -1,0 +1,193 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1623643280
+<< ndiff >>
+rect 627 4658 661 4692
+<< pdiff >>
+rect 627 4982 661 5016
+<< locali >>
+rect 910 4948 955 4992
+rect 1308 4942 1353 4986
+rect 368 4815 402 4849
+rect 487 4784 521 4818
+<< metal1 >>
+rect -1000 5056 994 5152
+rect 20722 4804 22600 4876
+rect -200 4512 962 4608
+rect 422 1106 428 1178
+rect 500 1106 506 1178
+<< via1 >>
+rect 4422 4790 4494 4862
+rect 9296 4790 9368 4862
+rect 12654 4790 12726 4862
+rect 15714 4790 15786 4862
+rect 20200 4790 20272 4862
+rect 428 1106 500 1178
+rect 4056 1106 4128 1178
+rect 7606 1106 7678 1178
+rect 12204 1106 12276 1178
+rect 14868 1106 14940 1178
+rect 18228 1106 18300 1178
+<< metal2 >>
+rect 4416 4862 4500 4868
+rect 4416 4790 4422 4862
+rect 4494 4790 4500 4862
+rect 4416 4784 4500 4790
+rect 9290 4862 9374 4868
+rect 9290 4790 9296 4862
+rect 9368 4790 9374 4862
+rect 9290 4784 9374 4790
+rect 12648 4862 12732 4868
+rect 12648 4790 12654 4862
+rect 12726 4790 12732 4862
+rect 12648 4784 12732 4790
+rect 15708 4862 15792 4868
+rect 15708 4790 15714 4862
+rect 15786 4790 15792 4862
+rect 15708 4784 15792 4790
+rect 20194 4862 20278 4868
+rect 20194 4790 20200 4862
+rect 20272 4790 20278 4862
+rect 20194 4784 20278 4790
+rect 22100 3800 22200 3900
+rect 422 1178 506 1184
+rect 422 1106 428 1178
+rect 500 1106 506 1178
+rect 422 1100 506 1106
+rect 4050 1178 4134 1184
+rect 4050 1106 4056 1178
+rect 4128 1106 4134 1178
+rect 4050 1100 4134 1106
+rect 7600 1178 7684 1184
+rect 7600 1106 7606 1178
+rect 7678 1106 7684 1178
+rect 7600 1100 7684 1106
+rect 12198 1178 12282 1184
+rect 12198 1106 12204 1178
+rect 12276 1106 12282 1178
+rect 12198 1100 12282 1106
+rect 14862 1178 14946 1184
+rect 14862 1106 14868 1178
+rect 14940 1106 14946 1178
+rect 14862 1100 14946 1106
+rect 18222 1178 18306 1184
+rect 18222 1106 18228 1178
+rect 18300 1106 18306 1178
+rect 18222 1100 18306 1106
+<< metal3 >>
+rect 20800 13000 21200 13400
+rect 20800 12200 21200 12600
+use ring_osc  ring_osc_0
+timestamp 1623640419
+transform 1 0 500 0 1 0
+box -502 0 21872 5968
+use via_m1  via_m1_5
+timestamp 1623561200
+transform 1 0 -2698 0 1 -6938
+box 10898 6956 11298 7052
+use via_m1  via_m1_4
+timestamp 1623561200
+transform 1 0 -8298 0 1 -6938
+box 10898 6956 11298 7052
+use via_m1  via_m1_8
+timestamp 1623561200
+transform 1 0 2902 0 1 -6938
+box 10898 6956 11298 7052
+use via_m1  via_m1_9
+timestamp 1623561200
+transform 1 0 8502 0 1 -6938
+box 10898 6956 11298 7052
+use via_m4_li  via_m4_li_4
+timestamp 1623563441
+transform 1 0 5400 0 1 -240
+box 0 2 400 98
+use via_m4_li  via_m4_li_5
+timestamp 1623563441
+transform 1 0 11000 0 1 -240
+box 0 2 400 98
+use pwell_co_ring  pwell_co_ring_0
+timestamp 1623529308
+transform 1 0 2020 0 1 6140
+box -1680 -6360 20145 60
+use via_m1  via_m1_1
+timestamp 1623561200
+transform 1 0 -11898 0 1 -1900
+box 10898 6956 11298 7052
+use via_m1  via_m1_2
+timestamp 1623561200
+transform 1 0 -11098 0 1 -2444
+box 10898 6956 11298 7052
+use via_m1  via_m1_3
+timestamp 1623561200
+transform 1 0 -8298 0 1 -1102
+box 10898 6956 11298 7052
+use via_m4_li  via_m4_li_3
+timestamp 1623563441
+transform 1 0 5400 0 1 6120
+box 0 2 400 98
+use via_m1  via_m1_6
+timestamp 1623561200
+transform 1 0 -2698 0 1 -1102
+box 10898 6956 11298 7052
+use via_m4_li  via_m4_li_2
+timestamp 1623563441
+transform 1 0 11000 0 1 6120
+box 0 2 400 98
+use via_m1  via_m1_7
+timestamp 1623561200
+transform 1 0 2902 0 1 -1102
+box 10898 6956 11298 7052
+use via_m4_li  via_m4_li_1
+timestamp 1623563441
+transform 1 0 16600 0 1 6120
+box 0 2 400 98
+use via_m1  via_m1_11
+timestamp 1623561200
+transform 1 0 11302 0 1 -2164
+box 10898 6956 11298 7052
+use via_m1  via_m1_10
+timestamp 1623561200
+transform 1 0 8502 0 1 -1102
+box 10898 6956 11298 7052
+use power_ring  power_ring_0
+timestamp 1623530672
+transform 1 0 -1000 0 1 -7600
+box 0 0 24400 21000
+<< labels >>
+flabel metal3 s 20800 13000 21200 13400 1 FreeSans 1000 0 0 0 vccd2
+port 14 nsew power bidirectional abutment
+flabel metal3 s 20800 12200 21200 12600 1 FreeSans 1000 0 0 0 vssd2
+port 15 nsew ground bidirectional abutment
+flabel metal2 s 22100 3800 22200 3900 1 FreeSans 1000 0 0 0 input_analog
+port 12 nsew signal input
+flabel locali s 368 4815 402 4849 1 FreeSans 1000 0 0 0 enb
+port 13 nsew signal input
+flabel locali 487 4784 521 4818 1 FreeSans 200 0 0 0 net3
+flabel pdiff 627 4982 661 5016 1 FreeSans 200 0 0 0 net1
+flabel ndiff 627 4658 661 4692 1 FreeSans 200 0 0 0 net2
+flabel locali 910 4948 955 4992 1 FreeSans 200 0 0 0 hi_logic
+flabel locali 1308 4942 1353 4986 1 FreeSans 200 0 0 0 lo_logic
+flabel metal2 s 18222 1100 18306 1184 1 FreeSans 1000 0 0 0 p[0]
+port 1 nsew signal output
+flabel metal2 s 14862 1100 14946 1184 1 FreeSans 1000 0 0 0 p[1]
+port 2 nsew signal output
+flabel metal2 s 12198 1100 12282 1184 1 FreeSans 1000 0 0 0 p[2]
+port 3 nsew signal output
+flabel metal2 s 7600 1100 7684 1184 1 FreeSans 1000 0 0 0 p[3]
+port 4 nsew signal output
+flabel metal2 4050 1100 4134 1184 1 FreeSans 1000 0 0 0 p[4]
+port 5 nsew signal output
+flabel metal2 s 422 1100 506 1184 1 FreeSans 1000 0 0 0 p[5]
+port 6 nsew signal output
+flabel metal2 s 4416 4784 4500 4868 1 FreeSans 1000 0 0 0 p[6]
+port 7 nsew signal output
+flabel metal2 s 9290 4784 9374 4868 1 FreeSans 1000 0 0 0 p[7]
+port 8 nsew signal output
+flabel metal2 s 12648 4784 12732 4868 1 FreeSans 1000 0 0 0 p[8]
+port 9 nsew signal output
+flabel metal2 s 15708 4784 15792 4868 1 FreeSans 1000 0 0 0 p[9]
+port 10 nsew signal output
+flabel metal2 s 20194 4784 20278 4868 1 FreeSans 1000 0 0 0 p[10]
+port 11 nsew signal output
+<< end >>

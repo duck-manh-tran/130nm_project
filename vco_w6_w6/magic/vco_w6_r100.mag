@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623748261
+timestamp 1623750586
 << ndiff >>
 rect 627 4658 661 4692
 << pdiff >>
@@ -51,10 +51,6 @@ rect 20194 4790 20200 4862
 rect 20272 4790 20278 4862
 rect 20722 4804 22600 4876
 rect -200 4512 962 4608
-rect 23514 3880 23586 3886
-rect 23514 3820 23520 3880
-rect 23580 3820 23586 3880
-rect 23514 3814 23586 3820
 rect 422 -7678 428 -7606
 rect 500 -7678 506 -7606
 rect 4050 -7678 4056 -7606
@@ -84,7 +80,6 @@ rect 9296 4790 9368 4862
 rect 12654 4790 12726 4862
 rect 15714 4790 15786 4862
 rect 20200 4790 20272 4862
-rect 23520 3820 23580 3880
 rect 428 1106 500 1178
 rect 4056 1106 4128 1178
 rect 7606 1106 7678 1178
@@ -128,10 +123,7 @@ rect 20272 13406 20278 13478
 rect 20194 4862 20278 13406
 rect 20194 4790 20200 4862
 rect 20272 4790 20278 4862
-rect 22002 3880 23600 3900
-rect 22002 3820 23520 3880
-rect 23580 3820 23600 3880
-rect 22002 3800 23600 3820
+rect 22002 3800 23620 3900
 rect 422 1106 428 1178
 rect 500 1106 506 1178
 rect 422 -7606 506 1106
@@ -272,10 +264,14 @@ flabel metal2 20194 13400 20278 13484 1 FreeSans 16 0 0 0 p[10]
 port 11 n signal output
 flabel metal1 -1090 4790 -1010 4870 1 FreeSans 16 0 0 0 enb
 port 12 w signal input
-flabel metal2 23500 3800 23600 3900 1 FreeSans 16 0 0 0 input_analog
-port 13 e analog input
 flabel metal3 -1000 13000 4200 13400 1 FreeSans 16 0 0 0 vccd2
 port 14 n power bidirectional
 flabel metal3 17600 -6800 22600 -6400 1 FreeSans 16 0 0 0 vssd2
 port 15 s ground bidirectional
+flabel metal2 23520 3800 23620 3900 1 FreeSans 16 0 0 0 input_analog
+port 13 e signal bidirectional
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX -1000 -7600 23400 13400
+string LEFsymmetry X Y R90
 << end >>

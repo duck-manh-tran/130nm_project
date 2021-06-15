@@ -1,0 +1,55 @@
+README:Hierarchy
+
+cell    :   power_ring_2_2
+library :   vco_130nm
+
+cell    :   ring_osc_3_2_1
+library :   vco_130nm
+
+cell    :   pwell_co_ring
+library :   vco_130nm
+
+cell    :   ring_osc_3_3_6
+library :   vco_130nm
+
+cell    :   inv_ver_3-1
+library :   vco_130nm
+
+
+
+Hierarchy:
+
+ring_osc_3_3_6{
+
+    use pwell_co_ring  pwell_co_ring_0
+    timestamp 1623122433
+
+    use power_ring_2_2  power_ring_2_2_0
+    timestamp 1623170494
+
+    use ring_osc_3_2_1  ring_osc_3_2_1_0
+    timestamp 1623136662
+
+    }
+
+ring_osc_3_2_1{
+    use inv_ver_3-1  inv_ver_3-1_0
+    use inv_ver_3-1  inv_ver_3-1_1
+    use inv_ver_3-1  inv_ver_3-1_2
+    use inv_ver_3-1  inv_ver_3-1_3
+    use inv_ver_3-1  inv_ver_3-1_4
+    use inv_ver_3-1  inv_ver_3-1_5
+    use inv_ver_3-1  inv_ver_3-1_6
+    use inv_ver_3-1  inv_ver_3-1_7
+    use inv_ver_3-1  inv_ver_3-1_8
+    use inv_ver_3-1  inv_ver_3-1_9
+    use inv_ver_3-1  inv_ver_3-1_10
+    timestamp 1622803027
+
+    use sky130_fd_sc_hd__einvp_1_  sky130_fd_sc_hd__einvp_1__0
+    timestamp 1622720877
+
+    use sky130_fd_sc_hd__conb_1_  sky130_fd_sc_hd__conb_1__0
+    timestamp 1622720877
+}
+

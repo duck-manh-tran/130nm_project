@@ -904,11 +904,11 @@ use inv_ver_3-1  inv_ver_3-1_5
 timestamp 1622803027
 transform -1 0 35800 0 1 -48
 box 0 -10 5900 3372
-use sky130_fd_sc_hd__einvp_1  sky130_fd_sc_hd__einvp_1_0 $PDKPATH/sky130A/libs.ref/sky130_fd_sc_hd/mag/
+use sky130_fd_sc_hd__einvp_1  sky130_fd_sc_hd__einvp_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag/
 timestamp 1621367673
 transform 1 0 764 0 1 5440
 box -38 -48 498 592
-use sky130_fd_sc_hd__conb_1  sky130_fd_sc_hd__conb_1_0 $PDKPATH/sky130A/libs.ref/sky130_fd_sc_hd/mag/
+use sky130_fd_sc_hd__conb_1  sky130_fd_sc_hd__conb_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag/
 timestamp 1621367673
 transform 1 0 1598 0 1 5440
 box -38 -48 314 592

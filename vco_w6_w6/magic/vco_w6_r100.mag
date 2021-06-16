@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623755908
+timestamp 1623840273
 << ndiff >>
 rect 627 4658 661 4692
 << pdiff >>
@@ -23,178 +23,130 @@ rect -1000 5056 994 5152
 rect -1090 4856 -1010 4870
 rect -1090 4804 -1076 4856
 rect -1024 4804 -1010 4856
-rect -1090 4790 -1010 4804
-rect 4416 4790 4422 4862
-rect 4494 4790 4500 4862
-rect 9290 4790 9296 4862
-rect 9368 4790 9374 4862
-rect 12648 4790 12654 4862
-rect 12726 4790 12732 4862
-rect 15708 4790 15714 4862
-rect 15786 4790 15792 4862
-rect 20194 4790 20200 4862
-rect 20272 4790 20278 4862
 rect 20722 4804 22600 4876
+rect -1090 4790 -1010 4804
 rect -200 4512 962 4608
-<< via1 >>
-rect 4422 4790 4494 4862
-rect 9296 4790 9368 4862
-rect 12654 4790 12726 4862
-rect 15714 4790 15786 4862
-rect 20200 4790 20272 4862
-rect 428 1106 500 1178
-rect 4056 1106 4128 1178
-rect 7606 1106 7678 1178
-rect 12204 1106 12276 1178
-rect 14868 1106 14940 1178
-rect 18228 1106 18300 1178
 << metal2 >>
-rect 4416 4862 4500 13484
-rect 4416 4790 4422 4862
-rect 4494 4790 4500 4862
-rect 9290 4862 9374 13484
-rect 9290 4790 9296 4862
-rect 9368 4790 9374 4862
-rect 12648 4862 12732 13484
-rect 12648 4790 12654 4862
-rect 12726 4790 12732 4862
-rect 15708 4862 15792 13484
-rect 15708 4790 15714 4862
-rect 15786 4790 15792 4862
-rect 20194 4862 20278 13484
-rect 20194 4790 20200 4862
-rect 20272 4790 20278 4862
-rect 22002 3800 23620 3900
-rect 422 1106 428 1178
-rect 500 1106 506 1178
-rect 422 -7684 506 1106
-rect 4050 1106 4056 1178
-rect 4128 1106 4134 1178
-rect 4050 -7684 4134 1106
-rect 7600 1106 7606 1178
-rect 7678 1106 7684 1178
-rect 7600 -7684 7684 1106
-rect 12198 1106 12204 1178
-rect 12276 1106 12282 1178
-rect 12198 -7684 12282 1106
-rect 14862 1106 14868 1178
-rect 14940 1106 14946 1178
-rect 14862 -7684 14946 1106
-rect 18222 1106 18228 1178
-rect 18300 1106 18306 1178
-rect 18222 -7684 18306 1106
+rect 4416 6216 4500 6300
+rect 9290 6216 9374 6300
+rect 12648 6216 12732 6300
+rect 15708 6216 15792 6300
+rect 20194 6216 20278 6300
+rect 23520 3800 23620 3900
+rect 422 -344 506 -260
+rect 4050 -344 4134 -260
+rect 7600 -344 7684 -260
+rect 12198 -344 12282 -260
+rect 14862 -344 14946 -260
+rect 18222 -344 18306 -260
 << metal3 >>
 rect -1000 13000 4200 13400
 rect 17600 -6800 22600 -6400
-use ring_osc  ring_osc_0
-timestamp 1623662121
-transform 1 0 500 0 1 0
-box -502 0 21872 5968
 use via_m1  via_m1_5
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 -2698 0 1 -6938
 box 10898 6956 11298 7052
 use via_m1  via_m1_4
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 -8298 0 1 -6938
 box 10898 6956 11298 7052
 use via_m1  via_m1_8
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 2902 0 1 -6938
 box 10898 6956 11298 7052
 use via_m1  via_m1_9
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 8502 0 1 -6938
 box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_4
-timestamp 1623563441
+timestamp 1623832439
 transform 1 0 5400 0 1 -240
 box 0 2 400 98
 use via_m4_li  via_m4_li_5
-timestamp 1623563441
+timestamp 1623832439
 transform 1 0 11000 0 1 -240
 box 0 2 400 98
 use pwell_co_ring  pwell_co_ring_0
-timestamp 1623529308
+timestamp 1623832439
 transform 1 0 2020 0 1 6140
 box -1680 -6360 20145 60
-use via_m1  via_m1_3
-timestamp 1623561200
-transform 1 0 -8298 0 1 -1102
-box 10898 6956 11298 7052
-use via_m1  via_m1_2
-timestamp 1623561200
-transform 1 0 -11098 0 1 -2444
-box 10898 6956 11298 7052
+use ring_osc  ring_osc_0
+timestamp 1623835266
+transform 1 0 500 0 1 0
+box -502 -344 23120 6301
 use via_m1  via_m1_1
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 -11898 0 1 -1900
 box 10898 6956 11298 7052
-use via_m1  via_m1_6
-timestamp 1623561200
-transform 1 0 -2698 0 1 -1102
+use via_m1  via_m1_2
+timestamp 1623832439
+transform 1 0 -11098 0 1 -2444
+box 10898 6956 11298 7052
+use via_m1  via_m1_3
+timestamp 1623832439
+transform 1 0 -8298 0 1 -1102
 box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_3
-timestamp 1623563441
+timestamp 1623832439
 transform 1 0 5400 0 1 6120
 box 0 2 400 98
-use via_m1  via_m1_7
-timestamp 1623561200
-transform 1 0 2902 0 1 -1102
+use via_m1  via_m1_6
+timestamp 1623832439
+transform 1 0 -2698 0 1 -1102
 box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_2
-timestamp 1623563441
+timestamp 1623832439
 transform 1 0 11000 0 1 6120
 box 0 2 400 98
+use via_m1  via_m1_7
+timestamp 1623832439
+transform 1 0 2902 0 1 -1102
+box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_1
-timestamp 1623563441
+timestamp 1623832439
 transform 1 0 16600 0 1 6120
 box 0 2 400 98
-use via_m1  via_m1_10
-timestamp 1623561200
-transform 1 0 8502 0 1 -1102
-box 10898 6956 11298 7052
 use via_m1  via_m1_11
-timestamp 1623561200
+timestamp 1623832439
 transform 1 0 11302 0 1 -2164
 box 10898 6956 11298 7052
+use via_m1  via_m1_10
+timestamp 1623832439
+transform 1 0 8502 0 1 -1102
+box 10898 6956 11298 7052
 use power_ring  power_ring_0
-timestamp 1623530672
+timestamp 1623832439
 transform 1 0 -1000 0 1 -7600
 box 0 0 24400 21000
 << labels >>
-flabel metal2 18222 -7684 18306 -7600 1 FreeSans 16 0 0 0 p[0]
-port 1 s signal output
-flabel metal2 14862 -7684 14946 -7600 1 FreeSans 16 0 0 0 p[1]
-port 2 s signal output
-flabel metal2 12198 -7684 12282 -7600 1 FreeSans 16 0 0 0 p[2]
-port 3 s signal output
-flabel metal2 7600 -7684 7684 -7600 1 FreeSans 16 0 0 0 p[3]
-port 4 s signal output
-flabel metal2 4050 -7684 4134 -7600 1 FreeSans 16 0 0 0 p[4]
-port 5 s signal output
-flabel metal2 422 -7684 506 -7600 1 FreeSans 16 0 0 0 p[5]
-port 6 s signal output
-flabel metal2 4416 13400 4500 13484 1 FreeSans 16 0 0 0 p[6]
-port 7 n signal output
-flabel metal2 9290 13400 9374 13484 1 FreeSans 16 0 0 0 p[7]
-port 8 n signal output
-flabel metal2 12648 13400 12732 13484 1 FreeSans 16 0 0 0 p[8]
-port 9 n signal output
-flabel metal2 15708 13400 15792 13484 1 FreeSans 16 0 0 0 p[9]
-port 10 n signal output
-flabel metal2 20194 13400 20278 13484 1 FreeSans 16 0 0 0 p[10]
-port 11 n signal output
 flabel metal1 -1090 4790 -1010 4870 1 FreeSans 16 0 0 0 enb
 port 12 w signal input
 flabel metal3 -1000 13000 4200 13400 1 FreeSans 16 0 0 0 vccd2
 port 14 n power bidirectional
 flabel metal3 17600 -6800 22600 -6400 1 FreeSans 16 0 0 0 vssd2
 port 15 s ground bidirectional
+flabel metal2 4416 6216 4500 6300 1 FreeSans 16 0 0 0 p[6]
+port 7 n signal output
+flabel metal2 9290 6216 9374 6300 1 FreeSans 16 0 0 0 p[7]
+port 8 n signal output
+flabel metal2 12648 6216 12732 6300 1 FreeSans 16 0 0 0 p[8]
+port 9 n signal output
+flabel metal2 20194 6216 20278 6300 1 FreeSans 16 0 0 0 p[10]
+port 11 n signal output
+flabel metal2 18222 -344 18306 -260 1 FreeSans 16 0 0 0 p[0]
+port 1 s signal output
+flabel metal2 14862 -344 14946 -260 1 FreeSans 16 0 0 0 p[1]
+port 2 s signal output
+flabel metal2 12198 -344 12282 -260 1 FreeSans 16 0 0 0 p[2]
+port 3 s signal output
+flabel metal2 7600 -344 7684 -260 1 FreeSans 16 0 0 0 p[3]
+port 4 s signal output
+flabel metal2 4050 -344 4134 -260 1 FreeSans 16 0 0 0 p[4]
+port 5 s signal output
+flabel metal2 422 -344 506 -260 1 FreeSans 16 0 0 0 p[5]
+port 6 s signal output
+flabel metal2 15708 6216 15792 6300 1 FreeSans 16 0 0 0 p[9]
+port 10 nsew default output
 flabel metal2 23520 3800 23620 3900 1 FreeSans 16 0 0 0 input_analog
-port 13 e signal bidirectional
-<< properties >>
-string LEFclass BLOCK
-string FIXED_BBOX -1000 -7600 23400 13400
-string LEFsymmetry X Y R90
+port 13 e signal input
 << end >>

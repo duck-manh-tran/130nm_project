@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623917107
+timestamp 1623927777
 << ndiff >>
 rect 1054 11992 1082 12024
 << pdiff >>
@@ -2522,10 +2522,6 @@ rect 29090 6014 29106 6087
 rect 29178 6014 29194 6087
 rect 29266 6014 29298 6087
 rect 28898 6000 29298 6014
-use power_ring_2_2  power_ring_2_2_0
-timestamp 1623170494
-transform 1 0 -26902 0 1 -3400
-box 27000 1800 63400 25600
 use pwell_co_ring  pwell_co_ring_0
 timestamp 1623829082
 transform 1 0 0 0 1 0
@@ -2534,6 +2530,10 @@ use ring_osc_r100  ring_osc_r100_0
 timestamp 1623917107
 transform 1 0 0 0 1 6460
 box 0 -258 36300 7874
+use power_ring_2_2  power_ring_2_2_0
+timestamp 1623918942
+transform 1 0 -26902 0 1 -3400
+box 27000 1800 63400 25600
 << labels >>
 flabel metal2 29854 6202 30014 6402 1 FreeSans 2400 0 0 0 p[0]
 port 1 nsew signal output
@@ -2554,7 +2554,7 @@ port 8 nsew signal output
 flabel metal2 21164 14134 21324 14334 1 FreeSans 2400 0 0 0 p[8]
 port 9 nsew signal output
 flabel metal2 27064 14134 27224 14334 1 FreeSans 2400 0 0 0 p[9]
-port 10 nsew signal bidirectional
+port 10 nsew signal output
 flabel locali s 781 12099 873 12245 1 FreeSans 2400 0 0 0 enb
 port 15 nsew signal input
 flabel locali 1327 12275 1496 12335 1 FreeSans 400 0 0 0 hi_logic
@@ -2581,5 +2581,5 @@ port 13 nsew power bidirectional abutment
 flabel metal3 s 30701 20600 31701 21000 1 FreeSans 2400 0 0 0 vssd2
 port 14 nsew ground bidirectional abutment
 flabel metal2 36600 11538 36800 11698 1 FreeSans 2400 0 0 0 input_analog
-port 12 nsew signal bidirectional
+port 12 nsew signal input
 << end >>

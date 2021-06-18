@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623991892
+timestamp 1623999811
 << ndiff >>
 rect 1054 11992 1082 12024
 << pdiff >>
@@ -2442,17 +2442,17 @@ rect 29178 6014 29194 6087
 rect 29266 6014 29298 6087
 rect 28898 6000 29298 6014
 use power_ring_2_2  power_ring_2_2_0
-timestamp 1623991673
+timestamp 1623999627
 transform 1 0 -26902 0 1 -3400
 box 27000 3200 63400 24200
-use pwell_co_ring  pwell_co_ring_0
-timestamp 1623829082
-transform 1 0 0 0 1 0
-box 176 6000 36124 14500
 use ring_osc  ring_osc_0
 timestamp 1623905276
 transform 1 0 0 0 1 6460
 box 0 -258 36700 7874
+use pwell_co_ring  pwell_co_ring_0
+timestamp 1623829082
+transform 1 0 0 0 1 0
+box 176 6000 36124 14500
 << labels >>
 flabel metal2 29854 6202 30014 6402 1 FreeSans 2400 0 0 0 p[0]
 port 1 nsew signal output

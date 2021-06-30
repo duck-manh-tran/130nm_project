@@ -1,0 +1,16 @@
+* Library          : sky130_fd_sc_hd
+* Generate for     : NGSPICE (ngbehavior=hs)
+
+.subckt sky130_fd_sc_hd__einvp_1 A TE VGND VNB VPB VPWR Z
+X0 a_276_297# A Z VPB sky130_fd_pr__pfet_01v8_hvt w=1e+06u l=150000u
+X1 VGND TE a_204_47# VNB sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+X2 a_27_47# TE VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X3 a_204_47# A Z VNB sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+X4 VPWR a_27_47# a_276_297# VPB sky130_fd_pr__pfet_01v8_hvt w=1e+06u l=150000u
+X5 a_27_47# TE VGND VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+.ends
+
+.subckt sky130_fd_sc_hd__conb_1 VGND VNB VPB VPWR HI LO
+R0 HI VPWR sky130_fd_pr__res_generic_po w=480000u l=45000u
+R1 VGND LO sky130_fd_pr__res_generic_po w=480000u l=45000u
+.ends

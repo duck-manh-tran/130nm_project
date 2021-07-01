@@ -4,80 +4,60 @@
 *  Design cell name	: ring_osc_tb.spice
 ******************************************************
 
-.lib $PDKPATH/libs.tech/ngspice/sky130.lib.spice tt 
-
-*Change temperatures: 0:5:120 (0, 5, 10, ...., 120)
-.temp 25
+.lib /home/tools/efabless/mpw-two-c/pdks/skywater-pdk/libraries/sky130_fd_pr/latest/models/sky130.lib.spice tt 
 
 .global gnd vdd
-.inc inv_cell.spice
-.inc crs_cpl_inv.spice
-.inc ring_osc.spice
+.inc sky130_digital.spice
+.inc adc_130nm.spice
 .param mc_mm_switch=1
-
-*Change resistor values (option)
-.param R_val=100
 
 *_____________cross coupling inverter testbench__________________*
 
-Xr1 vdd v_crt fa[0] fa[1] fa[2] fa[3] fa[4]
-+ fa[5] fa[6] fa[7] fa[8] fa[9] fa[10] ring_osc
-+ Ln12=1.8 Wn12=4.5 Fn12=4	
-+ Lp12=1.8 Wp12=4.5 Fp12=2
-+ Ln34=1.8 Wn34=4 Fn34=2
-+ Lp34=1.8 Wp34=4 Fp34=1
+Xr1 p1[0] p1[1] p1[2] p1[3] p1[4] p1[5] p1[6] p1[7] p1[8] p1[9] p1[10] input_1 enb vdd gnd gnd ring_osc
+Xr2 p2[0] p2[1] p2[2] p2[3] p2[4] p2[5] p2[6] p2[7] p2[8] p2[9] p2[10] input_2 enb vdd gnd gnd v_crt_v2 ring_osc_r100
+Xr3 p3[0] p3[1] p3[2] p3[3] p3[4] p3[5] p3[6] p3[7] p3[8] p3[9] p3[10] input_2 enb vdd gnd gnd v_crt_v3 ring_osc_w6
 
-
-V2 vdd gnd DC=1.8
-V3 v_in gnd DC=0.8
-R1 v_in v_crt 100
-R2 v_crt gnd 100 
+V1 vdd gnd DC=1.8
+V2 input_1 gnd DC=0.8
+V3 input_2 gnd DC=0.8
 V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
-D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
 
-
-.tran 0.2n 5u
+.tran 0.4n 5u
 
 .control
-echo "monte-carlo simulation for ring osc from 0 to 120 C degree" > ./typical_corner/temp_0_to_120.txt
-set num_threads=4
-let iy=0
-
-while iy<13
-*set temp sweep at here
-let temp_simu=iy*10
-set temp=$&temp_simu
+set num_threads=12
 let prd=1
 let Vin=unitvec(60)
 let Vin[0]=0.1
+let freq_v1=unitvec(60)
+let Vcrt_v1=unitvec(60)
+let freq_v2=unitvec(60)
+let Vcrt_v2=unitvec(60)
+let freq_v3=unitvec(60)
+let Vcrt_v3=unitvec(60)
 let ix=0
-let freq=unitvec(60)
-let Vcrt=unitvec(60)
-
 while Vin[ix] < 1.21
-
+	let Vcrt_v1[ix]=Vin[ix]/2
+	alter V2 DC=Vcrt_v1[ix]
 	alter V3 DC=Vin[ix]
 	run		
-	MEAS TRAN prd TRIG fa[0] VAL=0.9 RISE=8 TARG fa[0] VAL=0.9 RISE =9
-	MEAS TRAN Vcrt[ix] AVG v(v_crt) from=3u to=4u
-	let freq[ix] = 1/prd	
+	MEAS TRAN prd TRIG p1[0] VAL=0.9 RISE=8 TARG p1[0] VAL=0.9 RISE =9
+	let freq_v1[ix] = 1/prd	
+
+	MEAS TRAN prd TRIG p2[0] VAL=0.9 RISE=8 TARG p2[0] VAL=0.9 RISE =9
+	MEAS TRAN Vcrt_v2[ix] AVG v(v_crt_v2) from=3u to=4u
+	let freq_v2[ix] = 1/prd
+
+	MEAS TRAN prd TRIG p3[0] VAL=0.9 RISE=8 TARG p3[0] VAL=0.9 RISE =9
+	MEAS TRAN Vcrt_v3[ix] AVG v(v_crt_v3) from=3u to=4u
+	let freq_v3[ix] = 1/prd
+	
 	let ix = ix+1
 	Let Vin[ix] = Vin[ix-1]+0.02
 end
 
-* Organize file and directory at here:
-* syntax print to file:
-* print result1 result2 > ./corner_dir/temp_aa.txt
-
-echo "-----------------temp=" $&temp_simu "-------------------------------">> ./typical_corner/temp_0_to_120.txt 	
-print Vin Vcrt freq >> ./typical_corner/temp_0_to_120.txt 
-let iy=iy+1
-end
-quit
+print Vin Vcrt_v1 freq_v1 > ./result/vco.txt
+print Vin Vcrt_v2 freq_v2 > ./result/vco_r100.txt
+print Vin Vcrt_v3 freq_v3 > ./result/vco_w6_r100.txt
 .endc
 
-
-* D1 enb fa[0] sky130_fd_pr__diode_pw2nd_11v0 area=1
-* Xi1 net1 gnd gnd vdd vdd net2 sky130_fd_sc_hd__inv_1
-* Xi2 net2 gnd gnd vdd vdd fa[0] sky130_fd_sc_hd__inv_1
-* Xn1 enb fa[0] gnd gnd vdd vdd net1 sky130_fd_sc_hd__nand2_1

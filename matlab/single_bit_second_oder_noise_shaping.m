@@ -2,7 +2,7 @@ close all;
 %clear all;
 
 %% ----------------- Overall system ----------------
-trans_time = 5e-6;     %100ns         %transient time of simulation
+trans_time = 1000e-6;     %100ns         %transient time of simulation
 Fs = 48000*512;                          %Over sampling frequency of ADC
 t_s = 0:(1/Fs):(trans_time);            %discrete time
 div = 100;                                %time division
@@ -13,8 +13,8 @@ ovs = 512;                                %over sampling gap
 %%  -----------------Input signal Block--------------
 %set up spectrum of input signal
 f1 = 4*10^3;      %Hz
-V_ip = 0.5*cos(2*pi*f1*t)+0.1;
-V_in =-0.5*cos(2*pi*f1*t)+0.1;
+V_ip = 0.4*sin(2*pi*f1*t)+0.65;
+V_in =-0.4*sin(2*pi*f1*t)+0.65;
 %V_in = in_sig_gen(t);      %input signal genarator random signals
 
 %% --- Init VCO, DCO phase, voltage, ... -----------
@@ -37,8 +37,9 @@ counter2 = zeros(nop,div+1);
 % initate quantizer(qtz) values
 qtz = zeros(nop,1);
 % initate idac
-V_bs2 = 1.0;
-V_os2 = 0.1;
+V_bs2 = -1.0;
+V_os2 = 1.1;
+V_dco2 = [];
 %% Second order noise shapping
 
 for i = 1:length(t_s)-1
@@ -51,7 +52,7 @@ for i = 1:length(t_s)-1
     phase_v1(:,t_i) = mod(phase_v1(:,t_i), 2);
     
     % get rise pulse time (rpt) of phase_v1 signal
-    [rpt, ~] = find((fix(mod(phase_v1(:,t_i(2:end)), 2)).*~fix(mod(phase_v1(:,t_i(1:(end-1))), 2)))==1);
+    [~, rpt] = find((fix(mod(phase_v1(:,t_i(2:end)), 2)).*~fix(mod(phase_v1(:,t_i(1:(end-1))), 2)))==1);
     
     % initate counter1 in new clock cycle
     if(i>1)
@@ -71,13 +72,13 @@ for i = 1:length(t_s)-1
     [phase_d2(:,t_i), freq_d2(:,t_i)] = RO_phase_gen(V_dco2(t_i), Fs_dis, K_VCO_w6, phase_d2(:, t_i(1)), div);
     
     % get rise pulse time (rpt) of phase_d2 signal
-    [rpt, ~] = find((fix(mod(phase_d2(:,t_i(2:end)), 2)).*~fix(mod(phase_d2(:,t_i(1:end-1)), 2)))==1);
+    [~, rpt] = find((fix(mod(phase_d2(:,t_i(2:end)), 2)).*~fix(mod(phase_d2(:,t_i(1:end-1)), 2)))==1);
     
     % initate counter2 in new clock cycle
     counter2(:,t_i) = 0;
     
     % up down counter hold high value of phase_d2 signal
-    counter2(:,rpt+1:end) = 1;
+    counter2(:,t_i(rpt+1:end)) = 1;
     
     % phase_d2 quantization (qtz)
     qtz(:, i) = counter2(:,t_i(end));
@@ -91,16 +92,25 @@ adder_tree_out = qtz;
 [out_sinc3, out_integ_3] = decimation(adder_tree_out, Fs, t_s(1:end-1), ovs);
 
 %% Plot result
-subplot (4, 1, 1);
-plot (fix(mod(phase_v1, 2)));
-subplot (4, 1, 2);
-plot (counter1);
-subplot (4, 1, 3);
-plot (fix(mod(phase_d2, 2)));
-subplot (4, 1, 4);
-plot (counter2);
-
-
+%{
+subplot (6, 1, 1);
+plot (V_ip);
+subplot (6, 1, 2);
+plot (fix(mod(phase_v1, 2)),'r');
+subplot (6, 1, 3);
+plot (V_dco2);
+hold on;
+plot (counter1, 'r');
+subplot (6, 1, 4);
+plot (fix(mod(phase_d2, 2)), 'r');
+subplot (6, 1, 5);
+plot (counter2, 'r' );
+subplot (6, 1, 6);
+%}
+subplot (2, 1, 1);
+plot (V_ip);
+subplot (2, 1, 2);
+plot (out_sinc3);
 grid on;
 %figure(2)
 %scatter(out_integ_3);

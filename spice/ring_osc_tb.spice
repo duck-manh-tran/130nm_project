@@ -4,7 +4,7 @@
 *  Design cell name	: ring_osc_tb.spice
 ******************************************************
 
-.lib /home/tools/efabless/mpw-two-c/pdks/skywater-pdk/libraries/sky130_fd_pr/latest/models/sky130.lib.spice tt 
+.lib /home/dkit/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt 
 
 .global gnd vdd
 .inc sky130_digital.spice

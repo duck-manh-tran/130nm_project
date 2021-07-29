@@ -30,7 +30,7 @@ xi4 outn outp vdd vss VSUBS inv_34
 * Subcircuit	: ring_osc
 * Library		: ADC_130nm
 ********************************************************************************
-.subckt ring_osc p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss VSUBS
+.subckt ring_osc p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd VSUBS
 Xc1 p[10] p_n[10] p[0] p_n[0] vdd input VSUBS cc_inv
 Xc2 p[0] p_n[0] p[1] p_n[1] vdd input VSUBS cc_inv
 Xc3 p[1] p_n[1] p[2] p_n[2] vdd input VSUBS cc_inv
@@ -42,31 +42,29 @@ Xc8 p[6] p_n[6] p[7] p_n[7] vdd input VSUBS cc_inv
 Xc9 p[7] p_n[7] p[8] p_n[8] vdd input VSUBS cc_inv
 Xc10 p[8] p_n[8] p[9] p_n[9] vdd input VSUBS cc_inv
 Xc11 p[9] p_n[9] p[10] p_n[10] vdd input VSUBS cc_inv
-Xconb_1 vss VSUBS vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
-Xeinvp_1 hi_logic enb vss VSUBS vdd vdd p[0] sky130_fd_sc_hd__einvp_1
 .ends
 
 
-* Subcircuit	: ring_osc_r100
+* Subcircuit	: vco
 * Library		: ADC_130nm
 ********************************************************************************
-.subckt ring_osc_r100 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss VSUBS v_crt
-Xc1 p[10] p_n[10] p[0] p_n[0] vdd v_crt VSUBS cc_inv
-Xc2 p[0] p_n[0] p[1] p_n[1] vdd v_crt VSUBS cc_inv
-Xc3 p[1] p_n[1] p[2] p_n[2] vdd v_crt VSUBS cc_inv
-Xc4 p[2] p_n[2] p[3] p_n[3] vdd v_crt VSUBS cc_inv
-Xc5 p[3] p_n[3] p[4] p_n[4] vdd v_crt VSUBS cc_inv
-Xc6 p[4] p_n[4] p[5] p_n[5] vdd v_crt VSUBS cc_inv
-Xc7 p[5] p_n[5] p[6] p_n[6] vdd v_crt VSUBS cc_inv
-Xc8 p[6] p_n[6] p[7] p_n[7] vdd v_crt VSUBS cc_inv
-Xc9 p[7] p_n[7] p[8] p_n[8] vdd v_crt VSUBS cc_inv
-Xc10 p[8] p_n[8] p[9] p_n[9] vdd v_crt VSUBS cc_inv
-Xc11 p[9] p_n[9] p[10] p_n[10] vdd v_crt VSUBS cc_inv
-Xconb_1 vss VSUBS vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
-Xeinvp_1 hi_logic enb vss VSUBS vdd vdd p[0] sky130_fd_sc_hd__einvp_1
-R0 v_crt input sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
-R1 v_crt vss sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+.subckt vco p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss
+Xro_0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss ring_osc
+Xconb_1 vss vss vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
+Xeinvp_1 hi_logic enb vss vss vdd vdd p[0] sky130_fd_sc_hd__einvp_1
 .ends
+
+
+* Subcircuit	: vco_r100
+* Library 		: ADC_130nm
+********************************************************************************
+.subckt vco_r100 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss v_ctr
+Xro_0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] v_ctr enb vdd vss ring_osc
+Xconb_1 vss vss vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
+Xeinvp_1 hi_logic enb vss vss vdd vdd p[0] sky130_fd_sc_hd__einvp_1
+R0 v_ctr input sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+R1 v_ctr vss sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+.ends	
 
 
 * Subcircuit	: inv_w6_12
@@ -100,21 +98,28 @@ xi4 outn outp vdd vss VSUBS inv_w6_34
 * Subcircuit	: ring_osc_w6
 * Library 		: ADC_130nm
 ********************************************************************************
-.subckt ring_osc_w6 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss VSUBS v_crt
-Xc1 p[10] p_n[10] p[0] p_n[0] vdd v_crt VSUBS cc_inv_w6
-Xc2 p[0] p_n[0] p[1] p_n[1] vdd v_crt VSUBS cc_inv_w6
-Xc3 p[1] p_n[1] p[2] p_n[2] vdd v_crt VSUBS cc_inv_w6
-Xc4 p[2] p_n[2] p[3] p_n[3] vdd v_crt VSUBS cc_inv_w6
-Xc5 p[3] p_n[3] p[4] p_n[4] vdd v_crt VSUBS cc_inv_w6
-Xc6 p[4] p_n[4] p[5] p_n[5] vdd v_crt VSUBS cc_inv_w6
-Xc7 p[5] p_n[5] p[6] p_n[6] vdd v_crt VSUBS cc_inv_w6
-Xc8 p[6] p_n[6] p[7] p_n[7] vdd v_crt VSUBS cc_inv_w6
-Xc9 p[7] p_n[7] p[8] p_n[8] vdd v_crt VSUBS cc_inv_w6
-Xc10 p[8] p_n[8] p[9] p_n[9] vdd v_crt VSUBS cc_inv_w6
-Xc11 p[9] p_n[9] p[10] p_n[10] vdd v_crt VSUBS cc_inv_w6
-Xconb_1 vss VSUBS vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
-Xeinvp_1 hi_logic enb vss VSUBS vdd vdd p[0] sky130_fd_sc_hd__einvp_1
-R0 v_crt input sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
-R1 v_crt vss sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+.subckt ring_osc_w6 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] vdd VSUBS v_ctr
+Xc1 p[10] p_n[10] p[0] p_n[0] vdd v_ctr VSUBS cc_inv_w6
+Xc2 p[0] p_n[0] p[1] p_n[1] vdd v_ctr VSUBS cc_inv_w6
+Xc3 p[1] p_n[1] p[2] p_n[2] vdd v_ctr VSUBS cc_inv_w6
+Xc4 p[2] p_n[2] p[3] p_n[3] vdd v_ctr VSUBS cc_inv_w6
+Xc5 p[3] p_n[3] p[4] p_n[4] vdd v_ctr VSUBS cc_inv_w6
+Xc6 p[4] p_n[4] p[5] p_n[5] vdd v_ctr VSUBS cc_inv_w6
+Xc7 p[5] p_n[5] p[6] p_n[6] vdd v_ctr VSUBS cc_inv_w6
+Xc8 p[6] p_n[6] p[7] p_n[7] vdd v_ctr VSUBS cc_inv_w6
+Xc9 p[7] p_n[7] p[8] p_n[8] vdd v_ctr VSUBS cc_inv_w6
+Xc10 p[8] p_n[8] p[9] p_n[9] vdd v_ctr VSUBS cc_inv_w6
+Xc11 p[9] p_n[9] p[10] p_n[10] vdd v_ctr VSUBS cc_inv_w6
 .ends
 
+
+* Subcircuit	: vco_w6_r100
+* Library 		: ADC_130nm
+********************************************************************************
+.subckt vco_w6_r100 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd vss v_ctr
+X_ro-1 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] vdd vss v_ctr ring_osc_w6
+Xconb_1 vss VSUBS vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
+Xeinvp_1 hi_logic enb vss VSUBS vdd vdd p[0] sky130_fd_sc_hd__einvp_1
+R0 v_ctr input sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+R1 v_ctr vss sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+.ends

@@ -1,0 +1,174 @@
+* SPICE3 file created from vco_w6_r100.ext - technology: sky130A
+
+.subckt vco_w6_r100 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] enb input_analog vccd2 vssd2
+R0 ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+R1 ring_osc_w6_0/v_ctr input_analog sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
+X0 vccd2 p[8] p[10] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X1 p[10] p[8] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X2 vccd2 ring_osc_w6_0/pn[9] ring_osc_w6_0/pn[10] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X3 ring_osc_w6_0/pn[10] ring_osc_w6_0/pn[9] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X4 ring_osc_w6_0/pn[10] p[10] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X5 p[10] ring_osc_w6_0/pn[10] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X6 ring_osc_w6_0/v_ctr p[8] p[10] ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X7 p[10] p[8] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X8 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[9] ring_osc_w6_0/pn[10] ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X9 ring_osc_w6_0/pn[10] ring_osc_w6_0/pn[9] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_10/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X10 ring_osc_w6_0/pn[10] p[10] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X11 p[10] ring_osc_w6_0/pn[10] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X12 vccd2 p[10] p[9] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X13 p[9] p[10] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X14 vccd2 ring_osc_w6_0/pn[10] ring_osc_w6_0/pn[0] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X15 ring_osc_w6_0/pn[0] ring_osc_w6_0/pn[10] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X16 ring_osc_w6_0/pn[0] p[9] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X17 p[9] ring_osc_w6_0/pn[0] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X18 ring_osc_w6_0/v_ctr p[10] p[9] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X19 p[9] p[10] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X20 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[10] ring_osc_w6_0/pn[0] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X21 ring_osc_w6_0/pn[0] ring_osc_w6_0/pn[10] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X22 ring_osc_w6_0/pn[0] p[9] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X23 p[9] ring_osc_w6_0/pn[0] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X24 vccd2 p[9] p[7] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X25 p[7] p[9] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X26 vccd2 ring_osc_w6_0/pn[0] ring_osc_w6_0/pn[1] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X27 ring_osc_w6_0/pn[1] ring_osc_w6_0/pn[0] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X28 ring_osc_w6_0/pn[1] p[7] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X29 p[7] ring_osc_w6_0/pn[1] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X30 ring_osc_w6_0/v_ctr p[9] p[7] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X31 p[7] p[9] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X32 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[0] ring_osc_w6_0/pn[1] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X33 ring_osc_w6_0/pn[1] ring_osc_w6_0/pn[0] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X34 ring_osc_w6_0/pn[1] p[7] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X35 p[7] ring_osc_w6_0/pn[1] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X36 vccd2 p[7] p[5] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X37 p[5] p[7] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X38 vccd2 ring_osc_w6_0/pn[1] ring_osc_w6_0/pn[2] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X39 ring_osc_w6_0/pn[2] ring_osc_w6_0/pn[1] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X40 ring_osc_w6_0/pn[2] p[5] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X41 p[5] ring_osc_w6_0/pn[2] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X42 ring_osc_w6_0/v_ctr p[7] p[5] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X43 p[5] p[7] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X44 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[1] ring_osc_w6_0/pn[2] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X45 ring_osc_w6_0/pn[2] ring_osc_w6_0/pn[1] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X46 ring_osc_w6_0/pn[2] p[5] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X47 p[5] ring_osc_w6_0/pn[2] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+R2 ring_osc_w6_0/sky130_fd_sc_hd__einvp_1_0/A vccd2 sky130_fd_pr__res_generic_po w=480000u l=45000u
+R3 vssd2 ring_osc_w6_0/sky130_fd_sc_hd__conb_1_0/LO sky130_fd_pr__res_generic_po w=480000u l=45000u
+X48 vccd2 p[5] p[3] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X49 p[3] p[5] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X50 vccd2 ring_osc_w6_0/pn[2] ring_osc_w6_0/pn[3] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X51 ring_osc_w6_0/pn[3] ring_osc_w6_0/pn[2] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X52 ring_osc_w6_0/pn[3] p[3] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X53 p[3] ring_osc_w6_0/pn[3] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X54 ring_osc_w6_0/v_ctr p[5] p[3] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X55 p[3] p[5] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X56 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[2] ring_osc_w6_0/pn[3] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X57 ring_osc_w6_0/pn[3] ring_osc_w6_0/pn[2] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X58 ring_osc_w6_0/pn[3] p[3] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X59 p[3] ring_osc_w6_0/pn[3] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X60 vccd2 p[3] p[1] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X61 p[1] p[3] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X62 vccd2 ring_osc_w6_0/pn[3] ring_osc_w6_0/pn[4] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X63 ring_osc_w6_0/pn[4] ring_osc_w6_0/pn[3] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X64 ring_osc_w6_0/pn[4] p[1] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X65 p[1] ring_osc_w6_0/pn[4] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X66 ring_osc_w6_0/v_ctr p[3] p[1] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X67 p[1] p[3] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X68 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[3] ring_osc_w6_0/pn[4] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X69 ring_osc_w6_0/pn[4] ring_osc_w6_0/pn[3] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X70 ring_osc_w6_0/pn[4] p[1] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X71 p[1] ring_osc_w6_0/pn[4] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X72 vccd2 p[1] p[0] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X73 p[0] p[1] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X74 vccd2 ring_osc_w6_0/pn[4] ring_osc_w6_0/pn[5] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X75 ring_osc_w6_0/pn[5] ring_osc_w6_0/pn[4] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X76 ring_osc_w6_0/pn[5] p[0] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X77 p[0] ring_osc_w6_0/pn[5] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X78 ring_osc_w6_0/v_ctr p[1] p[0] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X79 p[0] p[1] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X80 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[4] ring_osc_w6_0/pn[5] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X81 ring_osc_w6_0/pn[5] ring_osc_w6_0/pn[4] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X82 ring_osc_w6_0/pn[5] p[0] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X83 p[0] ring_osc_w6_0/pn[5] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X84 vccd2 p[2] p[4] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X85 p[4] p[2] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X86 vccd2 ring_osc_w6_0/pn[6] ring_osc_w6_0/pn[7] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X87 ring_osc_w6_0/pn[7] ring_osc_w6_0/pn[6] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X88 ring_osc_w6_0/pn[7] p[4] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X89 p[4] ring_osc_w6_0/pn[7] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X90 ring_osc_w6_0/v_ctr p[2] p[4] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X91 p[4] p[2] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X92 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[6] ring_osc_w6_0/pn[7] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X93 ring_osc_w6_0/pn[7] ring_osc_w6_0/pn[6] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X94 ring_osc_w6_0/pn[7] p[4] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X95 p[4] ring_osc_w6_0/pn[7] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X96 vccd2 p[0] p[2] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X97 p[2] p[0] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X98 vccd2 ring_osc_w6_0/pn[5] ring_osc_w6_0/pn[6] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X99 ring_osc_w6_0/pn[6] ring_osc_w6_0/pn[5] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X100 ring_osc_w6_0/pn[6] p[2] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X101 p[2] ring_osc_w6_0/pn[6] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X102 ring_osc_w6_0/v_ctr p[0] p[2] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X103 p[2] p[0] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X104 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[5] ring_osc_w6_0/pn[6] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X105 ring_osc_w6_0/pn[6] ring_osc_w6_0/pn[5] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X106 ring_osc_w6_0/pn[6] p[2] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X107 p[2] ring_osc_w6_0/pn[6] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X108 vccd2 p[4] p[6] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X109 p[6] p[4] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X110 vccd2 ring_osc_w6_0/pn[7] ring_osc_w6_0/pn[8] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X111 ring_osc_w6_0/pn[8] ring_osc_w6_0/pn[7] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X112 ring_osc_w6_0/pn[8] p[6] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X113 p[6] ring_osc_w6_0/pn[8] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X114 ring_osc_w6_0/v_ctr p[4] p[6] ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X115 p[6] p[4] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X116 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[7] ring_osc_w6_0/pn[8] ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X117 ring_osc_w6_0/pn[8] ring_osc_w6_0/pn[7] ring_osc_w6_0/v_ctr ring_osc_w6_0/inv_8/vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X118 ring_osc_w6_0/pn[8] p[6] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X119 p[6] ring_osc_w6_0/pn[8] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X120 vccd2 p[6] p[8] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X121 p[8] p[6] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X122 vccd2 ring_osc_w6_0/pn[8] ring_osc_w6_0/pn[9] vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X123 ring_osc_w6_0/pn[9] ring_osc_w6_0/pn[8] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X124 ring_osc_w6_0/pn[9] p[8] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X125 p[8] ring_osc_w6_0/pn[9] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X126 ring_osc_w6_0/v_ctr p[6] p[8] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X127 p[8] p[6] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X128 ring_osc_w6_0/v_ctr ring_osc_w6_0/pn[8] ring_osc_w6_0/pn[9] vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X129 ring_osc_w6_0/pn[9] ring_osc_w6_0/pn[8] ring_osc_w6_0/v_ctr vssd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X130 ring_osc_w6_0/pn[9] p[8] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X131 p[8] ring_osc_w6_0/pn[9] vccd2 vccd2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=5e+06u l=1.9e+06u
+X132 a_1627_12582# li_1496_12384# vccd2 vccd2 sky130_fd_pr__pfet_01v8_hvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X133 p[0] ring_osc_w6_0/sky130_fd_sc_hd__einvp_1_0/A a_1627_12258# ring_osc_w6_0/sky130_fd_sc_hd__conb_1_0/VNB sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=650000u l=150000u
+X134 vccd2 enb li_1496_12384# vccd2 sky130_fd_pr__pfet_01v8_hvt ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X135 p[0] ring_osc_w6_0/sky130_fd_sc_hd__einvp_1_0/A a_1627_12582# vccd2 sky130_fd_pr__pfet_01v8_hvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X136 a_1627_12258# enb vssd2 ring_osc_w6_0/sky130_fd_sc_hd__conb_1_0/VNB sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=650000u l=150000u
+X137 vssd2 enb li_1496_12384# ring_osc_w6_0/sky130_fd_sc_hd__conb_1_0/VNB sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+C0 ring_osc_w6_0/pn[10] p[10] 3.59fF
+C1 p[2] vccd2 2.80fF
+C2 vccd2 p[5] 2.64fF
+C3 p[2] ring_osc_w6_0/pn[6] 2.82fF
+C4 p[3] ring_osc_w6_0/pn[3] 2.51fF
+C5 ring_osc_w6_0/pn[5] ring_osc_w6_0/v_ctr 2.54fF
+C6 ring_osc_w6_0/pn[1] p[7] 2.52fF
+C7 ring_osc_w6_0/pn[2] p[5] 2.73fF
+C8 vccd2 p[0] 3.44fF
+C9 p[8] ring_osc_w6_0/pn[9] 2.78fF
+C10 p[9] ring_osc_w6_0/pn[0] 2.91fF
+C11 ring_osc_w6_0/pn[4] vccd2 2.26fF
+C12 ring_osc_w6_0/pn[10] ring_osc_w6_0/v_ctr 2.65fF
+C13 ring_osc_w6_0/pn[5] p[0] 3.56fF
+C14 vccd2 p[6] 2.82fF
+C15 ring_osc_w6_0/pn[7] p[4] 2.73fF
+C16 vccd2 ring_osc_w6_0/pn[8] 2.09fF
+C17 p[6] ring_osc_w6_0/pn[8] 2.73fF
+C18 vccd2 p[7] 3.66fF
+C19 vccd2 p[9] 2.94fF
+C20 ring_osc_w6_0/pn[4] p[1] 2.28fF
+C21 vccd2 p[1] 2.36fF
+C22 p[8] vccd2 2.35fF
+C23 vccd2 ring_osc_w6_0/pn[10] 2.95fF
+C24 p[3] vccd2 3.07fF
+C25 vccd2 p[4] 3.18fF
+C26 vccd2 ring_osc_w6_0/v_ctr 6.18fF
+C27 vccd2 ring_osc_w6_0/sky130_fd_sc_hd__conb_1_0/VNB 363.00fF
+.ends

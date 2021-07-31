@@ -1,0 +1,65 @@
+*	Cell				 	: ring oscillator testbench
+*  Generated for		: NGSPICE
+*  Library name		: ADC_130nm
+*  Design cell name	: ring_osc_tb.spice
+******************************************************
+
+.global gnd vdd
+.lib /home/dkit/efabless/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt 
+.inc vco_w6_ext.spice
+.inc sky130_digital.spice
+.param mc_mm_switch=1
+
+*_____________cross coupling inverter testbench__________________*
+
+Xr3 p3[0] p3[1] p3[2] p3[3] p3[4] p3[5] p3[6] p3[7] p3[8] p3[9] p3[10] enb input_2 vdd gnd vco_w6_r100
+
+X_phase_ro_1 clk p3[0] gnd vdd ro[0] phase_ro
+X_phase_ro_1 clk p3[1] gnd vdd ro[1] phase_ro
+X_phase_ro_1 clk p3[2] gnd vdd ro[2] phase_ro
+X_phase_ro_1 clk p3[3] gnd vdd ro[3] phase_ro
+X_phase_ro_1 clk p3[4] gnd vdd ro[4] phase_ro
+X_phase_ro_1 clk p3[5] gnd vdd ro[5] phase_ro
+X_phase_ro_1 clk p3[6] gnd vdd ro[6] phase_ro
+X_phase_ro_1 clk p3[7] gnd vdd ro[7] phase_ro
+X_phase_ro_1 clk p3[8] gnd vdd ro[8] phase_ro
+X_phase_ro_1 clk p3[9] gnd vdd ro[9] phase_ro
+X_phase_ro_1 clk p3[10] gnd vdd ro[10] phase_ro
+
+V1 vdd gnd DC=1.8
+V3 input_2 gnd SIN(0.65 0.45 10K 0 0 0)
+V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
+V5 clk gnd DC = 0 PULSE( 0 1.8 0 1n 1n 19n 40n )
+
+.control
+set num_threads=8
+
+tran 0.5n 500n
+ print "ro[0]" "ro[1]" "ro[2]" > ./result/phase_vco_w6_r100_1.txt
+ print "ro[3]" "ro[4]" "ro[5]" > ./result/phase_vco_w6_r100_2.txt
+ print "ro[6]" "ro[7]" "ro[8]" > ./result/phase_vco_w6_r100_3.txt
+ print "ro[9]" "ro[10]" > ./result/phase_vco_w6_r100_4.txt
+
+
+
+.endc
+*	let prd=1
+* 	let Vin=unitvec(60)
+* 	let Vin[0]=0.1
+*  	let freq_v3=unitvec(60)
+*	let Vcrt_v3=unitvec(60)
+* 	let ix=0
+*while Vin[ix] < 1.21
+*	let Vcrt_v1[ix]=Vin[ix]/2
+*	alter V3 DC=Vin[ix]
+*	run		
+*
+*	MEAS TRAN prd TRIG p3[0] VAL=0.9 RISE=8 TARG p3[0] VAL=0.9 RISE =9
+*	let freq_v3[ix] = 1/prd
+*	
+*	let ix = ix+1
+*	Let Vin[ix] = Vin[ix-1]+0.02
+*end
+
+*print Vin  freq_v3 > ./result/vco_w6_r100.txt
+

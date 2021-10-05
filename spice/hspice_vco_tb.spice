@@ -31,40 +31,13 @@ V4 enb gnd DC=0 PULSE( 0 1.8 0 20n 20n 200n 1 )
 V5 clk gnd DC=0 PULSE( 0 1.8 0 1n 1n 19n 40n )
 V6 smpl_pul gnd DC=0 PULSE( 0 1.8 0 1n 1n 1n 40n )
 
-
-.control
-
-option RELTOL=0.01
-option VNTOL=1e-3 V
-option TRTOL=100
-option CHGTOL=10e-10
 *option INTERP
-save "ro[0]" "ro[1]" "ro[2]" "ro[3]" "ro[4]" "ro[5]" 
-+ "ro[6]" "ro[7]" "ro[8]" "ro[9]" "ro[10]" clk smpl_pul input_sig
-tran 2n 1u
+*save "ro[0]" "ro[1]" "ro[2]" "ro[3]" "ro[4]" "ro[5]" 
+*+ "ro[6]" "ro[7]" "ro[8]" "ro[9]" "ro[10]" clk smpl_pul input_sig
+.tran 2n 1u
 *	print "ro[0]" "ro[1]" "ro[2]" > ./result/ro_vco_w6_1.txt
 *	print "ro[3]" "ro[4]" "ro[5]" > ./result/ro_vco_w6_2.txt
 *	print "ro[6]" "ro[7]" "ro[8]" > ./result/ro_vco_w6_3.txt
 *	print "ro[9]" "ro[10]" > ./result/ro_vco_w6_4.txt
 *	print clk smpl_pul > ./result/clk.txt
-.endc
-*	let prd=1
-* 	let Vin=unitvec(60)
-* 	let Vin[0]=0.1
-*  	let freq_v3=unitvec(60)
-*	let Vcrt_v3=unitvec(60)
-* 	let ix=0
-*while Vin[ix] < 1.21
-*	let Vcrt_v1[ix]=Vin[ix]/2
-*	alter V3 DC=Vin[ix]
-*	run		
-*
-*	MEAS TRAN prd TRIG p3[0] VAL=0.9 RISE=8 TARG p3[0] VAL=0.9 RISE =9
-*	let freq_v3[ix] = 1/prd
-*	
-*	let ix = ix+1
-*	Let Vin[ix] = Vin[ix-1]+0.02
-*end
-
-*print Vin  freq_v3 > ./result/vco_w6_r100.txt
 

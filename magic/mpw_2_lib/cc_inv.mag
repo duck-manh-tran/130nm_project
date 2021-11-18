@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1637177666
+timestamp 1637229576
 << poly >>
 rect 69 636 479 684
 rect 69 619 75 636
@@ -226,6 +226,12 @@ rect 831 432 837 449
 rect 1355 432 1361 449
 rect 1379 432 1385 449
 rect 1643 435 1673 731
+rect 39 38 69 82
+rect 479 38 509 82
+rect 587 38 617 82
+rect 1027 38 1057 82
+rect 1135 38 1165 82
+rect 1423 38 1453 82
 rect 0 12 10 38
 rect 36 12 66 38
 rect 92 12 122 38
@@ -550,36 +556,36 @@ rect 1548 12 1578 38
 rect 1604 12 1634 38
 rect 1660 12 1712 38
 rect 0 0 1712 12
-use pfet_12  pfet_12_1
-timestamp 1637174344
-transform 1 0 472 0 1 634
-box 0 0 700 1016
-use pfet_34  pfet_34_1
-timestamp 1637174402
-transform 1 0 1348 0 1 634
-box 0 0 400 1016
-use pfet_34  pfet_34_0
-timestamp 1637174402
-transform 1 0 1060 0 1 634
-box 0 0 400 1016
-use nfet_34  nfet_34_1
-timestamp 1637172953
-transform 1 0 1348 0 1 -16
-box 0 0 400 610
-use nfet_34  nfet_34_0
-timestamp 1637172953
-transform 1 0 1060 0 1 -16
-box 0 0 400 610
-use pfet_12  pfet_12_0
-timestamp 1637174344
-transform 1 0 -76 0 1 634
-box 0 0 700 1016
-use nfet_12  nfet_12_1
-timestamp 1637172953
-transform 1 0 522 0 1 -16
-box 0 0 600 610
 use nfet_12  nfet_12_0
 timestamp 1637172953
 transform 1 0 -26 0 1 -16
 box 0 0 600 610
+use nfet_12  nfet_12_1
+timestamp 1637172953
+transform 1 0 522 0 1 -16
+box 0 0 600 610
+use pfet_12  pfet_12_0
+timestamp 1637174344
+transform 1 0 -76 0 1 634
+box 0 0 700 1016
+use nfet_34  nfet_34_0
+timestamp 1637172953
+transform 1 0 1060 0 1 -16
+box 0 0 400 610
+use nfet_34  nfet_34_1
+timestamp 1637172953
+transform 1 0 1348 0 1 -16
+box 0 0 400 610
+use pfet_34  pfet_34_0
+timestamp 1637174402
+transform 1 0 1060 0 1 634
+box 0 0 400 1016
+use pfet_34  pfet_34_1
+timestamp 1637174402
+transform 1 0 1348 0 1 634
+box 0 0 400 1016
+use pfet_12  pfet_12_1
+timestamp 1637174344
+transform 1 0 472 0 1 634
+box 0 0 700 1016
 << end >>

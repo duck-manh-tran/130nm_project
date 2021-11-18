@@ -1,0 +1,51 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1637179187
+<< metal3 >>
+rect 0 3238 20544 3638
+use cc_inv  cc_inv_4
+timestamp 1637177666
+transform -1 0 6848 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_5
+timestamp 1637177666
+transform -1 0 3424 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_2
+timestamp 1637177666
+transform -1 0 10272 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_3
+timestamp 1637177666
+transform -1 0 13696 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_1
+timestamp 1637177666
+transform -1 0 17120 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_0
+timestamp 1637177666
+transform -1 0 20544 0 -1 3238
+box -152 -32 3496 3300
+use cc_inv  cc_inv_10
+timestamp 1637177666
+transform 1 0 1231 0 1 3638
+box -152 -32 3496 3300
+use cc_inv  cc_inv_9
+timestamp 1637177666
+transform 1 0 4655 0 1 3638
+box -152 -32 3496 3300
+use cc_inv  cc_inv_7
+timestamp 1637177666
+transform 1 0 8079 0 1 3638
+box -152 -32 3496 3300
+use cc_inv  cc_inv_8
+timestamp 1637177666
+transform 1 0 11503 0 1 3638
+box -152 -32 3496 3300
+use cc_inv  cc_inv_6
+timestamp 1637177666
+transform 1 0 14927 0 1 3638
+box -152 -32 3496 3300
+<< end >>

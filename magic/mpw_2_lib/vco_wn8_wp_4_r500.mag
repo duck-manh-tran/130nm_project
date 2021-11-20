@@ -1,9 +1,6 @@
 magic
 tech sky130A
-timestamp 1637310356
-<< dnwell >>
-rect 720 1765 9580 3580
-rect 170 -80 10730 1765
+timestamp 1637401633
 << pwell >>
 rect 264 1834 876 1850
 rect 9462 1834 10598 1850
@@ -273,6 +270,17 @@ rect 9421 3427 9424 3459
 rect 9456 3427 9500 3459
 rect 9421 3424 9500 3427
 rect 9457 3419 9500 3424
+rect 1959 2284 2037 2334
+rect 3671 2284 3749 2334
+rect 5383 2284 5461 2334
+rect 7095 2284 7173 2334
+rect 8807 2284 8885 2334
+rect 877 1166 955 1216
+rect 2589 1166 2667 1216
+rect 4301 1166 4379 1216
+rect 6013 1166 6091 1216
+rect 7725 1166 7803 1216
+rect 9437 1166 9515 1216
 rect 3726 73 3764 76
 rect 3726 41 3729 73
 rect 3761 41 3764 73
@@ -1308,16 +1316,39 @@ rect 7988 -88 8002 -42
 rect 8048 -88 8062 -42
 rect 8108 -88 8111 -42
 rect 7879 -90 8111 -88
-use power_ring  power_ring_0
-timestamp 1623530672
-transform 1 0 -900 0 1 -3500
-box 0 0 12200 10500
-use pwell_co_ring  pwell_co_ring_0
-timestamp 1637304753
-transform 1 0 170 0 1 -80
-box 0 0 10560 3660
 use ring_osc  ring_osc_0
-timestamp 1637231857
+timestamp 1637401559
 transform 1 0 300 0 1 31
 box -300 -31 10550 3469
+use pwell_co_ring  pwell_co_ring_0
+timestamp 1637401559
+transform 1 0 170 0 1 -80
+box 0 0 10560 3660
+use power_ring  power_ring_0
+timestamp 1637401559
+transform 1 0 -900 0 1 -3500
+box 0 0 12200 10500
+<< labels >>
+flabel metal1 912 1191 912 1191 1 FreeSans 800 0 0 0 p[0]
+port 1 s signal output
+flabel metal1 2624 1191 2624 1191 1 FreeSans 800 0 0 0 p[2]
+port 3 s signal output
+flabel metal1 4336 1191 4336 1191 1 FreeSans 800 0 0 0 p[4]
+port 5 s signal output
+flabel metal1 6048 1191 6048 1191 1 FreeSans 800 0 0 0 p[6]
+port 7 s signal output
+flabel metal1 7760 1191 7760 1191 1 FreeSans 800 0 0 0 p[8]
+port 9 s signal output
+flabel metal1 9472 1191 9472 1191 1 FreeSans 800 0 0 0 p[10]
+port 11 s signal output
+flabel metal1 2002 2309 2002 2309 1 FreeSans 800 0 0 0 p[1]
+port 2 s signal output
+flabel metal1 3714 2309 3714 2309 1 FreeSans 800 0 0 0 p[3]
+port 4 s signal output
+flabel metal1 5426 2309 5426 2309 1 FreeSans 800 0 0 0 p[5]
+port 6 s signal output
+flabel metal1 7138 2309 7138 2309 1 FreeSans 800 0 0 0 p[7]
+port 8 s signal output
+flabel metal1 8850 2309 8850 2309 1 FreeSans 800 0 0 0 p[9]
+port 10 s signal output
 << end >>

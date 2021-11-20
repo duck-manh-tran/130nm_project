@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1637229576
+timestamp 1637401559
 << poly >>
 rect 69 636 479 684
 rect 69 619 75 636
@@ -557,35 +557,40 @@ rect 1604 12 1634 38
 rect 1660 12 1712 38
 rect 0 0 1712 12
 use nfet_12  nfet_12_0
-timestamp 1637172953
+timestamp 1637401559
 transform 1 0 -26 0 1 -16
 box 0 0 600 610
 use nfet_12  nfet_12_1
-timestamp 1637172953
+timestamp 1637401559
 transform 1 0 522 0 1 -16
 box 0 0 600 610
 use pfet_12  pfet_12_0
-timestamp 1637174344
+timestamp 1637401559
 transform 1 0 -76 0 1 634
 box 0 0 700 1016
 use nfet_34  nfet_34_0
-timestamp 1637172953
+timestamp 1637401559
 transform 1 0 1060 0 1 -16
 box 0 0 400 610
 use nfet_34  nfet_34_1
-timestamp 1637172953
+timestamp 1637401559
 transform 1 0 1348 0 1 -16
 box 0 0 400 610
 use pfet_34  pfet_34_0
-timestamp 1637174402
+timestamp 1637401559
 transform 1 0 1060 0 1 634
 box 0 0 400 1016
 use pfet_34  pfet_34_1
-timestamp 1637174402
+timestamp 1637401559
 transform 1 0 1348 0 1 634
 box 0 0 400 1016
 use pfet_12  pfet_12_1
-timestamp 1637174344
+timestamp 1637401559
 transform 1 0 472 0 1 634
 box 0 0 700 1016
+<< labels >>
+flabel metal1 16 760 16 760 1 FreeSans 240 0 0 0 inn
+flabel metal1 18 459 18 459 1 FreeSans 240 0 0 0 inp
+flabel metal1 1100 760 1100 760 1 FreeSans 240 0 0 0 outn
+flabel metal1 1100 459 1100 459 1 FreeSans 240 0 0 0 outp
 << end >>

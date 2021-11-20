@@ -1,6 +1,8 @@
 magic
 tech sky130A
-timestamp 1637401633
+timestamp 1637405452
+<< nwell >>
+rect 9806 2156 9975 2163
 << pwell >>
 rect 264 1834 876 1850
 rect 9462 1834 10598 1850
@@ -1316,18 +1318,26 @@ rect 7988 -88 8002 -42
 rect 8048 -88 8062 -42
 rect 8108 -88 8111 -42
 rect 7879 -90 8111 -88
-use ring_osc  ring_osc_0
-timestamp 1637401559
-transform 1 0 300 0 1 31
-box -300 -31 10550 3469
-use pwell_co_ring  pwell_co_ring_0
-timestamp 1637401559
-transform 1 0 170 0 1 -80
-box 0 0 10560 3660
+use res_pdiff  res_pdiff_0
+timestamp 1637405029
+transform 1 0 9806 0 1 2163
+box 0 0 188 441
+use res_pdiff  res_pdiff_1
+timestamp 1637405029
+transform 0 1 9975 -1 0 2344
+box 0 0 188 441
 use power_ring  power_ring_0
 timestamp 1637401559
 transform 1 0 -900 0 1 -3500
 box 0 0 12200 10500
+use pwell_co_ring  pwell_co_ring_0
+timestamp 1637401559
+transform 1 0 170 0 1 -80
+box 0 0 10560 3660
+use ring_osc  ring_osc_0
+timestamp 1637401559
+transform 1 0 300 0 1 31
+box -300 -31 10550 3469
 << labels >>
 flabel metal1 912 1191 912 1191 1 FreeSans 800 0 0 0 p[0]
 port 1 s signal output

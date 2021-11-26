@@ -513,7 +513,7 @@ MACRO vco_w6_r100
     END
   END input_analog
   PIN vccd2
-    ANTENNADIFFAREA 158.071899 ;
+    USE POWER ;
     PORT
       LAYER nwell ;
         RECT 6.500 62.105 9.180 63.950 ;
@@ -1253,7 +1253,7 @@ MACRO vco_w6_r100
     END
   END vccd2
   PIN vssd2
-    ANTENNADIFFAREA 111.683250 ;
+    USE GROUND ;
     PORT
       LAYER li1 ;
         RECT 15.000 68.700 106.000 69.000 ;

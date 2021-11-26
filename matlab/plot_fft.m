@@ -1,34 +1,22 @@
-
-F_samp = 50*10^6;            % Sampling frequency                    
+function plot_fft(fft_input, F_samp, fft_window_length)
+                   
 T = 1/F_samp;             % Sampling period       
-L = 1024;             % Length of signal
-t = (0:L-1)*T;        % Time vector
-
-fft_input_sinc3 = out_sinc3(10:L);
-
-%sinc3 fft signal
-Y_sinc3 = fft(fft_input_sinc3);
-P2_sinc3 = abs(Y_sinc3/L);
-P1_sinc3 = P2_sinc3(1:L/2+1);
-P1_sinc3(2:end-1) = 2*P1_sinc3(2:end-1);
-P1_sinc3(1) = P1_sinc3(2);
-P1_sinc3_db = 10*log(P1_sinc3) - max(10*log(P1_sinc3));
+L = fft_window_length;    % Length of signal
+t = (0:L-1)*T;            % Time vector
+W_blackman = blackmanharris(L).';
+fft_input_window = fft_input(10:L+9).*W_blackman;
+Y_adc = fft(fft_input_window);
+P2_adc = abs(Y_adc/L);
+P1_adc = P2_adc(1:L/2+1);
+P1_adc(2:end-1) = 2*P1_adc(2:end-1);
+P1_adc(1) = P1_adc(2);
+P1_adc_db = 10*log(P1_adc) - max(10*log(P1_adc));
 
 f = F_samp*(0:(L/2))/L;
-semilogx(f,P1_sinc3_db); 
-title('Sinc3 filter');
-xlabel('f (MHz)');
+semilogx(f, P1_adc_db); 
+title('Spectrum of ADC ouput');
+xlabel('Frequency (MHz)');
 ylabel('|P1(f)|(dB)');
 grid on;
 
-
-
-
-
-
-
-
-
-
-
-
+end

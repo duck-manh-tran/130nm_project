@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1624957116
+timestamp 1637945226
 << nwell >>
 rect 726 6022 1262 6068
 rect 1560 6022 1912 6068
@@ -1013,56 +1013,56 @@ rect 28600 -32 28620 28
 rect 28680 -32 28720 28
 rect 28780 -32 28800 28
 rect 28600 -48 28800 -32
-use inv_ver_3-1  inv_ver_3-1_0
-timestamp 1624717953
-transform -1 0 6300 0 1 -48
-box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_1
-timestamp 1624717953
+timestamp 1637945106
 transform -1 0 12200 0 1 -48
 box 0 -10 5900 3372
+use inv_ver_3-1  inv_ver_3-1_0
+timestamp 1637945106
+transform -1 0 6300 0 1 -48
+box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_2
-timestamp 1624717953
+timestamp 1637945106
 transform -1 0 18100 0 1 -48
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_3
-timestamp 1624717953
+timestamp 1637945106
 transform -1 0 24000 0 1 -48
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_4
-timestamp 1624717953
+timestamp 1637945106
 transform -1 0 29900 0 1 -48
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_5
-timestamp 1624717953
+timestamp 1637945106
 transform -1 0 35800 0 1 -48
 box 0 -10 5900 3372
-use inv_ver_3-1  inv_ver_3-1_6
-timestamp 1624717953
-transform 1 0 3578 0 -1 7664
-box 0 -10 5900 3372
 use sky130_fd_sc_hd__einvp_1  sky130_fd_sc_hd__einvp_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag/
-timestamp 1622775057
+timestamp 1630125002
 transform 1 0 764 0 1 5440
 box -38 -48 498 592
 use sky130_fd_sc_hd__conb_1  sky130_fd_sc_hd__conb_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag/
-timestamp 1622775057
+timestamp 1630125002
 transform 1 0 1598 0 1 5440
 box -38 -48 314 592
+use inv_ver_3-1  inv_ver_3-1_6
+timestamp 1637945106
+transform 1 0 3578 0 -1 7664
+box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_7
-timestamp 1624717953
+timestamp 1637945106
 transform 1 0 9478 0 -1 7664
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_8
-timestamp 1624717953
+timestamp 1637945106
 transform 1 0 15378 0 -1 7664
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_9
-timestamp 1624717953
+timestamp 1637945106
 transform 1 0 21278 0 -1 7664
 box 0 -10 5900 3372
 use inv_ver_3-1  inv_ver_3-1_10
-timestamp 1624717953
+timestamp 1637945106
 transform 1 0 27178 0 -1 7664
 box 0 -10 5900 3372
 << labels >>

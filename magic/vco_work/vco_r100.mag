@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1624957691
+timestamp 1637945226
 << psubdiff >>
 rect 21600 6200 21602 6300
 rect 21702 6200 21802 6300
@@ -2617,18 +2617,18 @@ rect 28992 6214 29008 6287
 rect 29080 6214 29096 6287
 rect 29168 6214 29200 6287
 rect 28800 6200 29200 6214
-use ring_osc_r100  ring_osc_r100_0
-timestamp 1624957116
-transform 1 0 -98 0 1 6660
-box 100 -58 36300 7674
-use power_ring_2_2  power_ring_2_2_0
-timestamp 1624938805
-transform 1 0 -27000 0 1 -3200
-box 27000 3200 63400 24200
 use pwell_co_ring  pwell_co_ring_0
-timestamp 1624938805
+timestamp 1623829082
 transform 1 0 -98 0 1 200
 box 176 6000 36124 14500
+use power_ring_2_2  power_ring_2_2_0
+timestamp 1623999627
+transform 1 0 -27000 0 1 -3200
+box 27000 3200 63400 24200
+use ring_osc_r100  ring_osc_r100_0
+timestamp 1637945226
+transform 1 0 -98 0 1 6660
+box 100 -58 36300 7674
 << labels >>
 flabel locali 1229 12475 1398 12535 1 FreeSans 400 0 0 0 hi_logic
 flabel metal1 30904 10962 31422 11060 1 FreeSans 2 0 0 0 v_crt

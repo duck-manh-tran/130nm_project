@@ -1,58 +1,52 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623640090
-<< pwell >>
-rect -100 -100 500 1100
+timestamp 1637941551
 << poly >>
-rect 0 961 400 976
-rect 0 915 16 961
-rect 62 915 96 961
-rect 142 915 176 961
-rect 222 915 256 961
-rect 302 915 336 961
-rect 382 915 400 961
-rect 0 903 400 915
-rect 0 58 400 73
-rect 0 12 16 58
-rect 62 12 96 58
-rect 142 12 176 58
-rect 222 12 256 58
-rect 302 12 336 58
-rect 382 12 400 58
-rect 0 0 400 12
+rect 0 955 400 976
+rect 0 921 22 955
+rect 56 921 102 955
+rect 136 921 182 955
+rect 216 921 262 955
+rect 296 921 342 955
+rect 376 921 400 955
+rect 0 903 400 921
+rect 0 52 400 73
+rect 0 18 22 52
+rect 56 18 102 52
+rect 136 18 182 52
+rect 216 18 262 52
+rect 296 18 342 52
+rect 376 18 400 52
+rect 0 -6 400 18
 << polycont >>
-rect 16 915 62 961
-rect 96 915 142 961
-rect 176 915 222 961
-rect 256 915 302 961
-rect 336 915 382 961
-rect 16 12 62 58
-rect 96 12 142 58
-rect 176 12 222 58
-rect 256 12 302 58
-rect 336 12 382 58
+rect 22 921 56 955
+rect 102 921 136 955
+rect 182 921 216 955
+rect 262 921 296 955
+rect 342 921 376 955
+rect 22 18 56 52
+rect 102 18 136 52
+rect 182 18 216 52
+rect 262 18 296 52
+rect 342 18 376 52
 << npolyres >>
 rect 0 73 400 903
 << locali >>
-rect 0 961 400 976
-rect 0 915 16 961
-rect 62 915 96 961
-rect 142 915 176 961
-rect 222 915 256 961
-rect 302 915 336 961
-rect 382 915 400 961
-rect 0 903 400 915
-rect 0 58 400 73
-rect 0 12 16 58
-rect 62 12 96 58
-rect 142 12 176 58
-rect 222 12 256 58
-rect 302 12 336 58
-rect 382 12 400 58
-rect 0 0 400 12
-<< properties >>
-string gencell sky130_fd_pr__res_generic_po
-string parameters w 2 l 4.15 m 1 nx 1 wmin 0.330 lmin 1.650 rho 48.2 val 100.015 dummy 0 dw 0.0 term 0.0 sterm 0.0 caplen 0.4 snake 0 guard 0 glc 0 grc 0 gtc 0 gbc 0 roverlap 0 endcov 100 full_metal 0 hv_guard 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
-string library sky130
+rect 0 955 400 976
+rect 0 921 22 955
+rect 56 921 102 955
+rect 136 921 182 955
+rect 216 921 262 955
+rect 296 921 342 955
+rect 376 921 400 955
+rect 0 903 400 921
+rect 0 52 400 73
+rect 0 18 22 52
+rect 56 18 102 52
+rect 136 18 182 52
+rect 216 18 262 52
+rect 296 18 342 52
+rect 376 18 400 52
+rect 0 0 400 18
 << end >>

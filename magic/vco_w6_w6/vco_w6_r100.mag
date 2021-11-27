@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1637941551
+timestamp 1637949574
 << pwell >>
 rect 1601 12232 1687 12318
 << ndiff >>
@@ -160,110 +160,110 @@ rect 24546 11464 24572 11520
 rect 24464 11356 24572 11464
 rect 18600 800 23600 1200
 use pwell_co_ring_w6  pwell_co_ring_w6_0
-timestamp 1637941551
+timestamp 1623529308
 transform 1 0 3020 0 1 13740
-box -1706 -6386 20171 86
+box -1680 -6360 20145 60
 use via_m4_li  via_m4_li_0
-timestamp 1637941551
+timestamp 1623563441
 transform 1 0 12000 0 1 7360
 box 0 2 400 98
 use via_m4_li  via_m4_li_1
-timestamp 1637941551
+timestamp 1623563441
 transform 1 0 6400 0 1 7360
 box 0 2 400 98
 use via_m1  via_m1_0
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 9502 0 1 662
 box 10898 6956 11298 7052
 use via_m1  via_m1_1
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 3902 0 1 662
 box 10898 6956 11298 7052
 use via_m1  via_m1_2
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 -1698 0 1 662
 box 10898 6956 11298 7052
 use via_m1  via_m1_3
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 -7298 0 1 662
 box 10898 6956 11298 7052
 use ring_osc_w6  ring_osc_w6_0
-timestamp 1637941551
+timestamp 1637949574
 transform 1 0 1500 0 1 7600
 box -502 0 23110 5968
 use via_m1  via_m1_4
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 -10898 0 1 5700
 box 10898 6956 11298 7052
 use via_m1  via_m1_5
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 -10098 0 1 5156
 box 10898 6956 11298 7052
 use via_m1  via_m1_6
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 -7298 0 1 6498
 box 10898 6956 11298 7052
-use via_m1  via_m1_7
-timestamp 1637941551
-transform 1 0 -1698 0 1 6498
-box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_2
-timestamp 1637941551
+timestamp 1623563441
 transform 1 0 6400 0 1 13720
 box 0 2 400 98
-use via_m1  via_m1_8
-timestamp 1637941551
-transform 1 0 3902 0 1 6498
+use via_m1  via_m1_7
+timestamp 1623561200
+transform 1 0 -1698 0 1 6498
 box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_3
-timestamp 1637941551
+timestamp 1623563441
 transform 1 0 12000 0 1 13720
 box 0 2 400 98
+use via_m1  via_m1_8
+timestamp 1623561200
+transform 1 0 3902 0 1 6498
+box 10898 6956 11298 7052
 use via_m4_li  via_m4_li_4
-timestamp 1637941551
+timestamp 1623563441
 transform 1 0 17600 0 1 13720
 box 0 2 400 98
 use via_m1  via_m1_9
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 12302 0 1 5436
 box 10898 6956 11298 7052
 use via_m1  via_m1_10
-timestamp 1637941551
+timestamp 1623561200
 transform 1 0 9502 0 1 6498
 box 10898 6956 11298 7052
 use power_ring  power_ring_0
-timestamp 1637941551
+timestamp 1623530672
 transform 1 0 0 0 1 0
 box 0 0 24400 21000
 << labels >>
 flabel metal2 s 19232 8700 19316 8784 1 FreeSans 800 0 0 0 p[9]
-port 1 nsew
+port 1 nsew signal output
 flabel metal2 s 15644 8700 15728 8784 1 FreeSans 800 0 0 0 p[7]
-port 2 nsew
+port 2 nsew signal output
 flabel metal2 s 13160 8700 13244 8784 1 FreeSans 800 0 0 0 p[5]
-port 3 nsew
+port 3 nsew signal output
 flabel metal2 s 8560 8700 8644 8784 1 FreeSans 800 0 0 0 p[3]
-port 4 nsew
+port 4 nsew signal output
 flabel metal2 s 4774 8700 4858 8784 1 FreeSans 800 0 0 0 p[1]
-port 5 nsew
+port 5 nsew signal output
 flabel metal2 s 1384 8700 1468 8784 1 FreeSans 800 0 0 0 p[0]
-port 6 nsew
+port 6 nsew signal output
 flabel metal2 s 5892 12384 5976 12468 1 FreeSans 800 0 0 0 p[2]
-port 7 nsew
+port 7 nsew signal output
 flabel metal2 s 10568 12384 10652 12468 1 FreeSans 800 0 0 0 p[4]
-port 8 nsew
+port 8 nsew signal output
 flabel metal2 s 14110 12384 14194 12468 1 FreeSans 800 0 0 0 p[6]
-port 9 nsew
+port 9 nsew signal output
 flabel metal2 s 16656 12384 16740 12468 1 FreeSans 800 0 0 0 p[8]
-port 10 nsew
+port 10 nsew signal output
 flabel metal2 s 21164 12384 21248 12468 1 FreeSans 800 0 0 0 p[10]
-port 11 nsew
+port 11 nsew signal output
 flabel metal3 s 590 12930 670 13010 1 FreeSans 800 0 0 0 enb
-port 12 nsew
+port 12 nsew signal input
 flabel metal2 s 24468 11442 24568 11542 1 FreeSans 800 0 0 0 input_analog
-port 13 nsew
+port 13 nsew signal input
 flabel metal3 s 0 20600 5200 21000 1 FreeSans 20 0 0 0 vccd2
-port 14 nsew
+port 14 nsew power bidirectional 
 flabel metal3 s 18600 800 23600 1200 1 FreeSans 20 0 0 0 vssd2
-port 15 nsew
+port 15 nsew ground bidirectional
 << end >>

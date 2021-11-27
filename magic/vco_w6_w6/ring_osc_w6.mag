@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1637941551
+timestamp 1637949574
 << nwell >>
 rect -200 5142 336 5190
 rect 599 5142 951 5190
@@ -1284,57 +1284,57 @@ rect 21234 2756 21278 2812
 rect 21334 2756 21356 2812
 rect 21156 2738 21356 2756
 use inv  inv_0
-timestamp 1637941551
+timestamp 1623637110
 transform -1 0 3246 0 -1 4834
-box -400 2000 3246 4834
-use inv  inv_1
-timestamp 1637941551
-transform -1 0 10330 0 -1 4834
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_2
-timestamp 1637941551
+timestamp 1623637110
 transform -1 0 6788 0 -1 4834
-box -400 2000 3246 4834
+box -400 1960 3246 4834
+use inv  inv_1
+timestamp 1623637110
+transform -1 0 10330 0 -1 4834
+box -400 1960 3246 4834
 use inv  inv_3
-timestamp 1637941551
+timestamp 1623637110
 transform -1 0 13872 0 -1 4834
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_4
-timestamp 1637941551
+timestamp 1623637110
 transform -1 0 17414 0 -1 4834
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_5
-timestamp 1637941551
+timestamp 1623637110
 transform -1 0 20956 0 -1 4834
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use sky130_fd_sc_hd__einvp_1  sky130_fd_sc_hd__einvp_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1637941551
+timestamp 1630125002
 transform 1 0 -162 0 1 4560
 box -38 -48 498 592
 use sky130_fd_sc_hd__conb_1  sky130_fd_sc_hd__conb_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1637941551
+timestamp 1630125002
 transform 1 0 637 0 1 4560
 box -38 -48 314 592
 use inv  inv_6
-timestamp 1637941551
+timestamp 1623637110
 transform 1 0 2096 0 1 1134
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_7
-timestamp 1637941551
+timestamp 1623637110
 transform 1 0 5638 0 1 1134
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_8
-timestamp 1637941551
+timestamp 1623637110
 transform 1 0 9180 0 1 1134
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_9
-timestamp 1637941551
+timestamp 1623637110
 transform 1 0 12722 0 1 1134
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use inv  inv_10
-timestamp 1637941551
+timestamp 1623637110
 transform 1 0 16264 0 1 1134
-box -400 2000 3246 4834
+box -400 1960 3246 4834
 use res_poly  res_poly_0
 timestamp 1637941551
 transform 1 0 20200 0 1 3900

@@ -58,5 +58,5 @@ R0 v_ctr input sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
 R1 v_ctr vss sky130_fd_pr__res_generic_po w=2e+06u l=4.15e+06u
 .ends
 
-x_vco_w6_r100_0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input_analog enb vccd2 vssd2
+x_vco_w6_r100_0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input_analog enb vccd2 vssd2 vco_w6_r100
 

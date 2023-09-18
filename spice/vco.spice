@@ -1,0 +1,57 @@
+* ADC_130nm spice library
+* author: Duc-Manh Tran
+
+* Subcircuit	: inv_12
+* Library		: ADC_130nm
+*****************************************************************************
+.subckt inv_12 y a VDDPIN  VSSPIN VNBPIN
+XM1 a y VSSPIN VNBPIN sky130_fd_pr__nfet_01v8 w=4.5 l=1.8 nf=4
+XM2 a y VDDPIN VDDPIN sky130_fd_pr__pfet_01v8 w=4.5 l=1.8 nf=2
+.ends
+
+* Subcircuit	: inv_34
+* Library		: ADC_130nm
+*****************************************************************************
+.subckt inv_34 y a VDDPIN  VSSPIN VNBPIN
+XM1 a y VSSPIN VNBPIN sky130_fd_pr__nfet_01v8 w=4 l=1.8 nf=2
+XM2 a y VDDPIN VDDPIN sky130_fd_pr__pfet_01v8 w=4 l=1.8 nf=1
+.ends
+
+* Subcircuit	: cc_inv
+* Library		: ADC_130nm
+*******************************************************************************
+.subckt cc_inv inp inn outp outn vdd vss VSUBS
+xi1 inp outp vdd vss VSUBS inv_12
+xi2 inn outn vdd vss VSUBS inv_12
+xi3 outp outn vdd vss VSUBS inv_34
+xi4 outn outp vdd vss VSUBS inv_34
+.ends
+
+* Subcircuit	: ring_osc
+* Library		: ADC_130nm
+********************************************************************************
+.subckt ring_osc p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] input enb vdd VSUBS
+Xc1 p[10] p_n[10] p[0] p_n[0] vdd input VSUBS cc_inv
+Xc2 p[0] p_n[0] p[1] p_n[1] vdd input VSUBS cc_inv
+Xc3 p[1] p_n[1] p[2] p_n[2] vdd input VSUBS cc_inv
+Xc4 p[2] p_n[2] p[3] p_n[3] vdd input VSUBS cc_inv
+Xc5 p[3] p_n[3] p[4] p_n[4] vdd input VSUBS cc_inv
+Xc6 p[4] p_n[4] p[5] p_n[5] vdd input VSUBS cc_inv
+Xc7 p[5] p_n[5] p[6] p_n[6] vdd input VSUBS cc_inv
+Xc8 p[6] p_n[6] p[7] p_n[7] vdd input VSUBS cc_inv
+Xc9 p[7] p_n[7] p[8] p_n[8] vdd input VSUBS cc_inv
+Xc10 p[8] p_n[8] p[9] p_n[9] vdd input VSUBS cc_inv
+Xc11 p[9] p_n[9] p[10] p_n[10] vdd input VSUBS cc_inv
+.ends
+
+
+* Subcircuit	: vco
+* Library		: ADC_130nm
+********************************************************************************
+.subckt vco p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] v_crt enb vdd vss
+Xro_0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] v_crt enb vdd vss ring_osc
+Xconb_1 vss vss vdd vdd hi_logic lo_logic sky130_fd_sc_hd__conb_1
+Xeinvp_1 hi_logic enb vss vss vdd vdd p[0] sky130_fd_sc_hd__einvp_1
+.ends
+
+X_vco0 p[0] p[1] p[2] p[3] p[4] p[5] p[6] p[7] p[8] p[9] p[10] v_crt enb vccd2 vsds2 vco

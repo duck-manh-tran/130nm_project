@@ -1,7 +1,22 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1637946178
+timestamp 1695136273
+<< error_s >>
+rect 745 12597 775 12623
+rect 912 12597 942 12623
+rect 1015 12597 1045 12623
+rect 745 12487 775 12513
+rect 912 12371 942 12407
+rect 1015 12371 1045 12407
+rect 790 12315 912 12327
+rect 790 12281 920 12315
+rect 966 12299 1095 12327
+rect 695 12277 920 12281
+rect 965 12277 1095 12299
+rect 695 12231 790 12277
+rect 695 12097 920 12147
+rect 965 12097 1095 12147
 << psubdiff >>
 rect 21600 6200 21602 6300
 rect 21702 6200 21802 6300
@@ -2567,10 +2582,6 @@ rect 28992 6214 29008 6287
 rect 29080 6214 29096 6287
 rect 29168 6214 29200 6287
 rect 28800 6200 29200 6214
-use ring_osc  ring_osc_0
-timestamp 1637945192
-transform 1 0 -98 0 1 6660
-box 100 -58 36700 7674
 use power_ring_2_2  power_ring_2_2_0
 timestamp 1623999627
 transform 1 0 -27000 0 1 -3200
@@ -2579,6 +2590,10 @@ use pwell_co_ring  pwell_co_ring_0
 timestamp 1623829082
 transform 1 0 -98 0 1 200
 box 176 6000 36124 14500
+use ring_osc  ring_osc_0
+timestamp 1637945192
+transform 1 0 -98 0 1 6660
+box 100 -58 36700 7674
 << labels >>
 flabel metal2 36402 10948 36602 11108 1 FreeSans 2400 0 0 0 input_analog
 port 12 nsew signal bidirectional
@@ -2587,41 +2602,26 @@ port 13 nsew power bidirectional abutment
 flabel metal3 s 30702 19800 31702 20200 1 FreeSans 2400 0 0 0 vssd2
 port 14 nsew ground bidirectional abutment
 flabel locali 1688 12416 1732 12460 1 FreeSans 2 0 0 0 lo_logic
-flabel metal2 34266 10048 34582 10186 1 FreeSans 2 0 0 0 pn[10]
-flabel metal2 702 10532 1018 10670 1 FreeSans 2 0 0 0 pn[5]
-flabel metal1 6046 7956 6344 8084 1 FreeSans 2 0 0 0 pn[4]
-flabel metal1 11946 7954 12244 8082 1 FreeSans 2 0 0 0 pn[3]
-flabel metal1 17858 7954 18156 8082 1 FreeSans 2 0 0 0 pn[2]
-flabel metal1 23754 7954 24052 8082 1 FreeSans 2 0 0 0 pn[1]
-flabel metal1 29670 7954 29968 8082 1 FreeSans 2 0 0 0 pn[0]
-flabel metal1 26946 12852 27244 12980 1 FreeSans 2 0 0 0 pn[9]
-flabel metal1 21054 12852 21352 12980 1 FreeSans 2 0 0 0 pn[8]
-flabel metal1 15150 12854 15448 12982 1 FreeSans 2 0 0 0 pn[7]
-flabel metal1 9238 12852 9536 12980 1 FreeSans 2 0 0 0 pn[6]
-flabel metal1 30904 10962 31422 11060 1 FreeSans 2 0 0 0 v_crt
-flabel locali 1229 12475 1398 12535 1 FreeSans 400 0 0 0 hi_logic
-flabel metal2 6210 8510 6394 8602 1 FreeSans 1000 0 0 0 p[1]
-port 2 nsew signal output
-flabel metal2 9338 12328 9522 12420 1 FreeSans 1000 0 0 0 p[2]
-port 3 nsew signal output
-flabel metal2 12098 8510 12282 8602 1 FreeSans 1000 0 0 0 p[3]
-port 4 nsew signal output
-flabel metal2 17986 8510 18170 8602 1 FreeSans 1000 0 0 0 p[5]
-port 6 nsew signal output
-flabel metal2 23966 8510 24150 8602 1 FreeSans 1000 0 0 0 p[7]
-port 8 nsew signal output
-flabel metal2 29854 8510 30038 8602 1 FreeSans 1000 0 0 0 p[9]
-port 10 nsew signal output
-flabel metal2 33166 8510 33350 8602 1 FreeSans 1000 0 0 0 p[10]
+flabel metal2 34266 10048 34582 10186 1 FreeSans 2 0 0 0 p[10]
 port 11 nsew signal output
-flabel metal2 1228 8510 1412 8602 1 FreeSans 2 0 0 0 p[0]
-port 1 nsew signal output
-flabel metal2 21022 12326 21206 12418 1 FreeSans 1000 0 0 0 p[6]
-port 7 nsew signal output
-flabel metal2 27002 12324 27186 12416 1 FreeSans 1000 0 0 0 p[8]
-port 9 nsew signal output
-flabel metal2 15134 12324 15318 12416 1 FreeSans 1000 0 0 0 p[4]
+flabel metal2 702 10532 1018 10670 1 FreeSans 2 0 0 0 p[5]
+port 6 nsew signal output
+flabel metal1 6046 7956 6344 8084 1 FreeSans 2 0 0 0 p[4]
 port 5 nsew signal output
-flabel metal3 474 12856 546 13040 3 FreeSans 1600 90 0 0 enb
-port 15 nsew signal input
+flabel metal1 11946 7954 12244 8082 1 FreeSans 2 0 0 0 p[3]
+port 4 nsew signal output
+flabel metal1 17858 7954 18156 8082 1 FreeSans 2 0 0 0 p[2]
+port 3 nsew signal output
+flabel metal1 23754 7954 24052 8082 1 FreeSans 2 0 0 0 p[1]
+port 2 nsew signal output
+flabel metal1 29670 7954 29968 8082 1 FreeSans 2 0 0 0 p[0]
+port 1 nsew signal output
+flabel metal1 26946 12852 27244 12980 1 FreeSans 2 0 0 0 p[9]
+port 10 nsew signal output
+flabel metal1 21054 12852 21352 12980 1 FreeSans 2 0 0 0 p[8]
+port 9 nsew signal output
+flabel metal1 15150 12854 15448 12982 1 FreeSans 2 0 0 0 p[7]
+port 8 nsew signal output
+flabel metal1 9238 12852 9536 12980 1 FreeSans 2 0 0 0 p[6]
+port 7 nsew signal output
 << end >>
